@@ -1,0 +1,129 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Oswald:wght@600&display=swap');
+
+#rr_ola-solidao {
+  /* EDIT SIZES */
+  --width: 420px;
+  --img-size: 100px;
+  /* EDIT COLORS */
+  --bg-container: #181718;
+  --bg-header: #141414;
+  --bg-accent: #302232;
+  --bg-txt: #1e1e1e;
+  --circle-border: #423346;
+  --text-color: #dadada;
+  --text-accent: #86678f;
+  --title-color: #584b58;
+  /* EDIT FONTS */
+  --main-font: 'Inter', sans-serif;
+  --font-size: 11px;
+  --line-spacing: 170%;
+  position: relative;
+}
+
+#rr_ola-solidao a[href="https://is.gd/rossr"] ~ .rcontainer {
+  width: var(--width);
+  position: relative;
+  padding: 20px;
+  margin: 5px 0;
+  background: var(--bg-container);
+}
+
+#rr_ola-solidao a[href="https://is.gd/rossr"] ~ .rcontainer .rheader table {
+  width: 100%;
+  background: var(--bg-header);
+  border-spacing: 0;
+}
+
+#rr_ola-solidao a[href="https://is.gd/rossr"] ~ .rcontainer .rheader .rimg {
+  width: 45%;
+  min-width: var(--img-size);
+  background: var(--bg-accent);
+  clip-path: polygon(0 0, 100% 0, 65% 100%, 0% 100%);
+  padding: 25px;
+}
+
+#rr_ola-solidao a[href="https://is.gd/rossr"] ~ .rcontainer .rheader .rimg img {
+  width: var(--img-size);
+  height: var(--img-size);
+  object-fit: cover;
+  border-radius: 100%;
+  box-sizing: border-box;
+  border: 12px solid var(--circle-border);
+}
+
+#rr_ola-solidao a[href="https://is.gd/rossr"] ~ .rcontainer .rheader .rtitle {
+  width: 60%;
+  padding-right: 8%;
+  text-align: center;
+}
+
+#rr_ola-solidao a[href="https://is.gd/rossr"] ~ .rcontainer .rheader .rtitle b {
+  display: block;
+  font: 600 44px/100% 'Oswald', sans-serif;
+  color: var(--title-color);
+  letter-spacing: -2px;
+}
+
+#rr_ola-solidao a[href="https://is.gd/rossr"] ~ .rcontainer .rheader .rtitle i {
+  display: block;
+  margin-top: 10px;
+  opacity: .7;
+  font-size: 7px;
+  line-height: 110%;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 500;
+  text-align: justify;
+  text-transform: uppercase;
+  letter-spacing: .7px;
+  color: var(--text-color);
+}
+
+#rr_ola-solidao a[href="https://is.gd/rossr"] ~ .rcontainer .rtxt {
+  padding: 30px 30px;
+  background: var(--bg-txt);
+  text-align: justify;
+  font: var(--font-size)/var(--line-spacing) var(--main-font);
+  color: var(--text-color);
+  letter-spacing: .5px;
+}
+
+#rr_ola-solidao a[href="https://is.gd/rossr"] ~ .rcontainer .rtxt b {
+  font-size: calc(var(--font-size) + 1px);
+  color: var(--text-accent);
+}
+
+#rr_ola-solidao a[href="https://is.gd/rossr"] {
+  height: 12px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#rr_ola-solidao:after {
+  display: block;
+  content: "「RR」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .7;
+}
