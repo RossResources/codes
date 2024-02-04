@@ -1,0 +1,87 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.cdnfonts.com/css/fjalla-one-2');
+
+#rr_finding-beauty {
+  --img-width: 140px;
+  --img-height: 110px;
+  --spacing: 17px;
+  --title-size: 37px;
+  --bg-main: #242424;
+  --border: #2e2e2e;
+  --accent: #816d9d;
+  --title-color: #f9f9f9;
+  --text-color: #d1d1d1;
+  position: relative;
+}
+
+#rr_finding-beauty .rcontainer {
+  width: fit-content;
+  padding: var(--spacing);
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+}
+
+#rr_finding-beauty .rflex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#rr_finding-beauty .rflex::before {
+  content: "";
+  width: 200%;
+  height: 30px;
+  background: var(--accent);
+  transform: rotate(-35deg);
+  position: absolute;
+  top: 0;
+  left: -70%;
+}
+
+#rr_finding-beauty .rtitle {
+  margin-right: calc(var(--spacing) - 3px);
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  font: bold var(--title-size)/100% 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+
+#rr_finding-beauty a[href="https://is.gd/rossr"] img {
+  width: var(--img-width);
+  height: var(--img-height);
+  object-fit: cover;
+  box-shadow: 0 0 25px #0000005c;
+}
+
+#rr_finding-beauty .rsub {
+  padding: 4px 8px;
+  margin-top: 7px;
+  max-width: calc(var(--img-width) + 40px);
+  border-left: 1px solid;
+  font: bold 8px/110% 'Karla', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: justify;
+  color: var(--text-color);
+}
