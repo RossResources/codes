@@ -1,0 +1,218 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+@keyframes rconceived-in-the-sky-rotate {
+  0%   {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+#rr_this-is-the-day {
+  --width: 500px;
+  --img-size: 150px;
+  --border-thickness: 12px;
+  --border-base-color: #6a7abc;
+  --overlay-background: transparent;
+  --background: #ffffff14;
+  --lines: #ffffff4a;
+  --text-color: #dadada;
+}
+
+#rr_this-is-the-day .rwrap {
+  width: var(--width);
+  background: url(https://i.imgur.com/gflPIBq.png) fixed center/cover;
+  background-color: var(--overlay-background);
+  background-blend-mode: hard-light;
+  box-sizing: border-box;
+  position: relative;
+  padding: 20px;
+  color: var(--text-color);
+}
+
+#rr_this-is-the-day .rdec {
+  text-align: left;
+  position: absolute;
+  inset: 15px;
+}
+
+#rr_this-is-the-day .rdec::before, #rr_this-is-the-day .rdec::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+#rr_this-is-the-day .rdec.rtop::before, #rr_this-is-the-day .rdec.rtop::after {
+  top: -10px;
+  left: -10px;
+}
+
+#rr_this-is-the-day .rdec.rbot::before, #rr_this-is-the-day .rdec.rbot::after {
+  bottom: -10px;
+  right: -10px;
+}
+
+#rr_this-is-the-day .rdec::before {
+  width: 80%;
+  height: var(--border-thickness);
+}
+
+#rr_this-is-the-day .rdec::after {
+  width: var(--border-thickness);
+  height: 80%;
+}
+
+#rr_this-is-the-day .rdec.rtop::before {
+  background: linear-gradient(90deg, var(--border-base-color) 30%, transparent);
+}
+
+#rr_this-is-the-day .rdec.rtop::after {
+  background: linear-gradient(180deg, var(--border-base-color) 30%, transparent);
+}
+
+#rr_this-is-the-day .rdec.rbot::before {
+  background: linear-gradient(-90deg, var(--border-base-color) 30%, transparent);
+}
+
+#rr_this-is-the-day .rdec.rbot::after {
+  background: linear-gradient(0deg, var(--border-base-color) 30%, transparent);
+}
+
+#rr_this-is-the-day .rcontainer {
+  padding: 20px 20px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: #ffffff14;
+  backdrop-filter: blur(30px);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+}
+
+#rr_this-is-the-day .rstars > img {
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: .5;
+}
+
+#rr_this-is-the-day .rflex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#rr_this-is-the-day a[href="https://is.gd/rossr"] .rimg-container {
+  width: var(--img-size);
+  height: var(--img-size);
+  box-sizing: border-box;
+  border-radius: 100%;
+  position: relative;
+  padding: 20px;
+}
+
+#rr_this-is-the-day a[href="https://is.gd/rossr"] .rimg-container * {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 100%;
+  position: relative;
+}
+
+#rr_this-is-the-day a[href="https://is.gd/rossr"] .rimg-container > span {
+  display: block;
+  background: conic-gradient(transparent 30%, var(--lines) 60%, var(--lines) 60%, transparent 90%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, transparent 69%, black 71%);
+  mask-image: radial-gradient(circle at 50% 50%, transparent 69%, black 71%);
+  position: absolute;
+  inset: 0;
+  animation: rconceived-in-the-sky-rotate 2s linear 0s infinite;
+}
+
+#rr_this-is-the-day a[href="https://is.gd/rossr"] .rimg {
+  border: 1px solid var(--lines);
+  padding: 10px;
+}
+
+#rr_this-is-the-day a[href="https://is.gd/rossr"] .rimg > div {
+  position: absolute;
+  inset: 0;
+  animation: rconceived-in-the-sky-rotate 10s linear 0s infinite;
+}
+
+#rr_this-is-the-day a[href="https://is.gd/rossr"] .rimg > div::before, #rr_this-is-the-day a[href="https://is.gd/rossr"] .rimg > div::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 100%;
+  position: absolute;
+  left: calc(50% - 2px);
+}
+
+#rr_this-is-the-day a[href="https://is.gd/rossr"] .rimg > div::before {
+  top: -2.5px;
+}
+
+#rr_this-is-the-day a[href="https://is.gd/rossr"] .rimg > div::after {
+  bottom: -2.5px;
+}
+
+#rr_this-is-the-day a[href="https://is.gd/rossr"] .rimg > img {
+  object-fit: cover;
+}
+
+#rr_this-is-the-day .rflex > div {
+  width: 100%;
+}
+
+#rr_this-is-the-day .rtitle {
+  font: 100 32px/100% 'Raleway', sans-serif;
+  text-transform: lowercase;
+  letter-spacing: -1px;
+}
+
+#rr_this-is-the-day .rtitle::before, #rr_this-is-the-day .rtitle::after {
+  content: "";
+  display: block;
+  width: 85%;
+  height: .8px;
+  padding: 0;
+  margin: 10px auto;
+  background: linear-gradient(90deg, transparent, transparent, #fff, transparent, transparent);
+  opacity: .6;
+}
+
+#rr_this-is-the-day .rtitle::before {
+  margin-top: 0;
+}
+
+#rr_this-is-the-day .rtitle ~ span {
+  display: block;
+  margin: 20px 20px 0;
+  font: bold 8px/100% 'Karla', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: justify;
+}
