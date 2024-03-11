@@ -1,0 +1,145 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@font-face {
+    font-family: 'Fathers';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('https://fonts.cdnfonts.com/s/107536/Fathers-BF654cd265614b2.woff') format('woff');
+}
+
+#rr_towards-the-sun {
+  --img-size: 95px;
+  --img-margin: 15px;
+  --bg-main: #d5b68e;
+  --border-color: #b9986e;
+  --title-color: #745936;
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+
+#rr_towards-the-sun a[href="https://is.gd/rossr"] ~ .rcontainer {
+  width: calc(var(--img-size) * 3 + var(--img-margin) * 6);
+  padding: calc(var(--img-margin) + 30px);
+  background: var(--bg-main);
+  border: 30px solid var(--border-color);
+  position: relative;
+}
+
+#rr_towards-the-sun a[href="https://is.gd/rossr"] ~ .rcontainer::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: url(https://i.imgur.com/jKXeSaR.png) center/cover;
+  background-position: -30px -50px;
+  mix-blend-mode: overlay;
+  position: absolute;
+  inset: 0;
+}
+
+#rr_towards-the-sun a[href="https://is.gd/rossr"] ~ .rcontainer::after {
+  content: '';
+  display: block;
+  width: 238px;
+  height: 350px;
+  background: url(https://i.imgur.com/osxoHo2.png) center / cover;
+  position: absolute;
+  bottom: -24px;
+  right: -70px;
+  mix-blend-mode: hard-light;
+}
+
+#rr_towards-the-sun a[href="https://is.gd/rossr"] ~ .rcontainer .rtitle {
+  padding: 3px 10px;
+  width: fit-content;
+  border-radius: 15px;
+  margin-bottom: var(--img-margin);
+  border-bottom: 10px solid;
+  font: 900 36px/100% 'Fathers', serif;
+  text-transform: uppercase;
+  color: var(--title-color);
+  letter-spacing: 4px;
+}
+
+#rr_towards-the-sun a[href="https://is.gd/rossr"] ~ .rcontainer .rimg {
+  width: var(--img-size);
+  height: var(--img-size);
+  border: 6px solid var(--bg-main);
+  margin: var(--img-margin);
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+#rr_towards-the-sun a[href="https://is.gd/rossr"] ~ .rcontainer .rimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#rr_towards-the-sun a[href="https://is.gd/rossr"] ~ .rcontainer .rdata {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--bg-main);
+  position: absolute;
+  inset: 3px;
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+#rr_towards-the-sun a[href="https://is.gd/rossr"] ~ .rcontainer .rimg:hover .rdata {
+  opacity: 1;
+}
+
+#rr_towards-the-sun a[href="https://is.gd/rossr"] ~ .rcontainer .rdata b {
+  margin-bottom: 5px;
+  border-bottom: 1px solid;
+  font: 20px/110% 'Fathers', serif;
+  color: var(--title-color);
+}
+
+#rr_towards-the-sun a[href="https://is.gd/rossr"] ~ .rcontainer .rdata i {
+  font: italic 13px/100% 'Arial', serif;
+}
+
+#rr_towards-the-sun a[href="https://is.gd/rossr"] {
+  height: 12px;
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#rr_towards-the-sun:after {
+  display: block;
+  content: "「RR」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+#rr_towards-the-sun:hover::after {
+  content: "「is.gd/rossr」";
+}
