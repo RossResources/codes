@@ -29,6 +29,7 @@
   --bg-main: #d5b68e;
   --border-color: #b9986e;
   --title-color: #745936;
+  --text-color: #000000;
   width: fit-content;
   position: relative;
   overflow: hidden;
@@ -121,6 +122,7 @@
 
 #rr_towards-the-sun a[href="https://is.gd/rossr"] ~ .rcontainer .rdata i {
   font: italic 13px/100% 'Arial', serif;
+  color: var(--text-color);
 }
 
 #rr_towards-the-sun a[href="https://is.gd/rossr"] {
