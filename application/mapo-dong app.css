@@ -1,0 +1,454 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                  CREATED BY ROSS DON'T REMOVE THE CREDITS
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&family=Open+Sans&family=Poppins&display=swap');
+
+#rmapodongfp * {
+    transition: all .7s ease;
+}
+
+#rmapodongfp {
+    --width: 700px;
+    --background-color: #efefef;
+    --bg-main: #e3e3e3;
+    --accent: #e78888;
+    --accent-bg-text-color: #fff;
+    --text-color: #000;
+    --image-size: 135px;
+    --outer-spacing: 30px;
+    --inner-spacing: 12px;
+    width: var(--width);
+    padding: 15px 0;
+    position: relative;
+    color: var(--text-color);
+    white-space: normal;
+}
+
+#rmapodongfp *::-webkit-scrollbar {
+    width: 5px;
+}
+
+#rmapodongfp *::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background: var(--background-color);
+}
+
+#rmapodongfp *::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border: 2px solid var(--background-color);
+}
+
+#rmapodongfp .rcontainer {
+    width: var(--width);
+    position: relative;
+    border: 15px solid var(--accent);
+    padding: 8px;
+    font: 13px/150% 'Open Sans';
+}
+
+#rmapodongfp .rcontainer .rheader {
+    width: var(--width);
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+}
+
+#rmapodongfp .rheader .rleft {
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    background: url(https://64.media.tumblr.com/64e69ca4244da261bbca2a74e58e337b/e950da8c2ee91dd2-17/s1280x1920/2b8f98326ea3b2fe2fc80b65ed00d7fcf997ba59.png) center/cover;
+    filter: grayscale(1) brightness(.5);
+    border: 15px solid #00000069;
+    box-sizing: border-box;
+    position: relative;
+    left: 0;
+}
+
+#rmapodongfp:hover .rheader .rleft {
+    left: -30%;
+}
+
+#rmapodongfp .rheader .rright {
+    width: calc(70% - 8px);
+    height: 100%;
+    display: inline-block;
+    margin-left: 4px;
+    color: var(--accent-bg-text-color);
+    position: relative;
+    left: 0;
+}
+
+#rmapodongfp:hover .rheader .rright {
+    left: -60%;
+}
+
+#rmapodongfp .rheader .rright .rbg {
+    width: 100%;
+    height: 100%;
+    background: url(https://64.media.tumblr.com/27cf6eb1cb8bc1506dba1fbc11c790f4/e950da8c2ee91dd2-79/s1280x1920/741046044af8d57cdb2bc316bf320b6457df3283.png) center/cover;
+    background-color: transparent;
+    background-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    right: 0;
+    filter: grayscale(0) brightness(1) blur(0px);
+}
+
+#rmapodongfp:hover .rheader .rright .rbg {
+    filter: grayscale(1) brightness(.6) blur(1px);
+}
+
+#rmapodongfp .rheader .rright::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--accent);
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .7s ease;
+}
+
+#rmapodongfp:hover .rheader .rright::after {
+    opacity: 1;
+}
+
+#rmapodongfp .rcontainer a[href="https://is.gd/rossr"] {
+    width: var(--image-size);
+    height: var(--image-size);
+    display: block;
+    position: absolute;
+    top: 45px;
+    left: calc(30% - var(--image-size) / 2 + 5px);
+}
+
+#rmapodongfp:hover .rcontainer a[href="https://is.gd/rossr"] {
+    transform: rotate(360deg);
+}
+
+#rmapodongfp .rcontainer a[href="https://is.gd/rossr"]::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    padding: var(--inner-spacing);
+    background: var(--background-color);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: absolute;
+    top: calc(0px - var(--inner-spacing));
+    left: calc(0px - var(--inner-spacing));
+}
+
+#rmapodongfp .rcontainer a[href="https://is.gd/rossr"] img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: relative;
+}
+
+#rmapodongfp > span {
+    display: block;
+    height: 45%;
+    position: absolute;
+    z-index: 1;
+    bottom: 70px;
+    left: 115px;
+    color: var(--accent);
+    text-transform: lowercase;
+    font: 128px/20px 'Anton', serif;
+    letter-spacing: -3px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+}
+
+#rmapodongfp:hover > span {
+    left: -55px;
+}
+
+#rmapodongfp .rheader .rcontent {
+    width: 70%;
+    height: 100%;
+    display: inline-block;
+    background: var(--background-color);
+    position: absolute;
+    top: 0;
+    right: -100%;
+}
+
+#rmapodongfp:hover .rheader .rcontent {
+    right: 0;
+}
+
+#rmapodongfp .rcontent .rbg {
+    width: calc(100% - 8px);
+    height: 100%;
+    box-sizing: border-box;
+    margin-left: 8px;
+    background: var(--bg-main);
+}
+
+#rmapodongfp .rcontent input[type="radio"] {
+    display: none;
+}
+
+#rmapodongfp .rcontent input[type="radio"] ~ label {
+    width: 40px;
+    height: 40px;
+    background: var(--accent);
+    border: 7px solid var(--background-color);
+    position: absolute;
+    z-index: 5;
+    left: -23px;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: crosshair;
+}
+
+#rmapodongfp .rcontent .rtab:nth-child(1) input[type="radio"] ~ label {
+    top: 230px;
+}
+
+#rmapodongfp .rcontent .rtab:nth-child(2) input[type="radio"] ~ label {
+    top: calc(230px + 100px);
+}
+
+#rmapodongfp .rcontent .rtab:nth-child(3) input[type="radio"] ~ label {
+    top: calc(230px + 100px * 2);
+}
+
+#rmapodongfp .rcontent .rtab:nth-child(4) input[type="radio"] ~ label {
+    top: calc(230px + 100px * 3);
+}
+
+#rmapodongfp .rcontent .rtab:nth-child(5) input[type="radio"] ~ label {
+    top: calc(230px + 100px * 4);
+}
+
+#rmapodongfp .rcontent input[type="radio"] ~ label i {
+    transform: rotate(-45deg);
+    color: #fff;
+    font-size: 26px;
+}
+
+#rmapodongfp .rcontent .rinfobox {
+    position: absolute;
+    top: 55px;
+    left: 45px;
+    right: 0;
+    bottom: 0;
+    border: 1px solid transparent;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#rmapodongfp .rcontent input[type="radio"]:checked ~ label ~ .rinfobox {
+    visibility: visible;
+    opacity: 1;
+}
+
+#rmapodongfp .rcontent .rsong {
+    width: 300px;
+    padding: 30px 0 20px;
+    background: var(--accent);
+    border-radius: 5px;
+    color: var(--accent-bg-text-color);
+}
+
+#rmapodongfp .rcontent .rsong b {
+    display: block;
+    font: bold 15px/150% 'Poppins';
+    letter-spacing: 0px;
+}
+
+#rmapodongfp .rcontent .rsong bb {
+    display: block;
+    font: bold 9px/150% 'Poppins';
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#rmapodongfp .rcontent .rsong i {
+    padding: 15px 8px 0;
+}
+
+#rmapodongfp .rcontent .rsynopsis {
+    max-height: 400px;
+    overflow: auto;
+    padding: 25px 45px;
+    margin: 20px 0;
+    text-align: justify;
+    font: 12px/170% 'Poppins';
+    letter-spacing: .5px;
+    white-space: break-spaces;
+}
+
+#rmapodongfp .rcontent .rsynopsis b {
+    color: var(--accent);
+}
+
+#rmapodongfp .rcontent .rtraits {
+    width: 350px;
+}
+
+#rmapodongfp .rcontent .rtraits b {
+    display: inline-block;
+    margin: 3px;
+    padding: 4px 6px 2px;
+    background: var(--accent);
+    color: var(--accent-bg-text-color);
+    text-transform: uppercase;
+    font: bold 9px/150% 'Poppins';
+    letter-spacing: 1px;
+}
+
+#rmapodongfp .rcontent .rtraits b:nth-child(even) {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+
+#rmapodongfp .rcontent .rbasics {
+    width: 140px;
+    position: absolute;
+    bottom: 25px;
+    left: -230px;
+    color: var(--accent-bg-text-color);
+    text-align: left;
+}
+
+#rmapodongfp .rcontent .rbasicinfo {
+    margin: 20px 0;
+    backdrop-filter: blur(2px);
+}
+
+#rmapodongfp .rcontent .rbasicinfo b {
+    display: block;
+    font: bold 9px/150% 'Poppins';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#rmapodongfp .rcontent .rbasicinfo i {
+    display: block;
+    font: bold 16px/150% 'Poppins';
+}
+
+#rmapodongfp .rcontent .rdesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#rmapodongfp .rtab:nth-child(3) .rdata > div {
+    max-height: 330px;
+    overflow: auto;
+}
+
+#rmapodongfp .rcontent .rdesc b, #rmapodongfp .rcontent .rdata > b  {
+    display: block;
+    margin: 25px 0;
+    text-transform: lowercase;
+    font: 50px/100% 'Anton';
+    color: var(--accent);
+}
+
+#rmapodongfp .rcontent .rdesc > div {
+    width: 70%;
+    max-height: 180px;
+    overflow: auto;
+    text-align: justify;
+    font: 12px/170% 'Poppins';
+    letter-spacing: .5px;
+    white-space: break-spaces;
+}
+
+#rmapodongfp .rcontent .rdata .rinfo {
+    width: 330px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+#rmapodongfp .rcontent .rtab:nth-child(3) .rdata .rinfo {
+    margin-bottom: 30px;
+}
+
+#rmapodongfp .rcontent .rdata .rinfo b {
+    display: block;
+    margin-right: 5px;
+    color: var(--accent);
+    text-transform: uppercase;
+    font: bold 9px/130% 'Poppins';
+    letter-spacing: 1px;
+}
+
+#rmapodongfp .rcontent .rdata .rinfo i {
+    display: block;
+    font: 11px/130% 'Poppins';
+    letter-spacing: 1px;
+}
+
+#rmapodongfp .rcontent .rquote {
+    margin-top: 40px;
+    display: inline-block;
+    padding: 3px 10px 2px;
+    border: 1px solid var(--accent);
+    font: italic bold 16px/150% 'Poppins';
+    color: var(--accent);
+}
+
+#rmapodongfp .rcontent .rstory.rscroll {
+    height: 570px;
+    overflow: auto;
+    margin: 45px 35px;
+    padding-right: 35px;
+    text-align: center;
+}
+
+#rmapodongfp .rcontent .rstory.rscroll b {
+    display: inline-block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 5px 10px 3px;
+    background: var(--accent);
+    color: var(--accent-bg-text-color);
+    font: bold 16px/150% 'Poppins';
+}
+
+#rmapodongfp .rcontent .rstory.rscroll p {
+    text-align: justify;
+    font: 12px/170% 'Poppins';
+    letter-spacing: .5px;
+}
+
+#rmapodongfp .rcontent .rstory.rscroll p i {
+    padding-right: 10px;
+    color: var(--accent);
+    text-transform: uppercase;
+    font: bold 10px/130% 'Poppins';
+    letter-spacing: 1px;
+}
