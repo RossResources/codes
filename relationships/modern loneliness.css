@@ -1,0 +1,125 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
+#rr_modern-loneliness {
+  --img-width: 130px;
+  --img-height: 100px;
+  --img-margin: 15px;
+  --bg-main: #fff5f2;
+  --border-color: #ffd4d3;
+  --title-color: #e8a591;
+  --name-bg: #dd8f8f;
+  --name-color: #fff;
+  --info-bg: #fff8f6;
+  --info-color: #000;
+  position: relative;
+}
+
+#rr_modern-loneliness a[href="https://is.gd/rossr"] ~ .rcontainer {
+  width: calc(var(--img-width)* 3 + var(--img-margin)* 6);
+  padding: calc(var(--img-margin) + 50px);
+  background: var(--bg-main);
+  position: relative;
+  outline: 3px solid var(--border-color);
+  outline-offset: -13px;
+}
+
+#rr_modern-loneliness a[href="https://is.gd/rossr"] ~ .rcontainer::after {
+  content: "";
+  width: 256px;
+  height: 238px;
+  background: url(https://i.imgur.com/xfUiO8G.png) center / cover;
+  position: absolute;
+  bottom: -80px;
+  left: -79px;
+}
+
+#rr_modern-loneliness a[href="https://is.gd/rossr"] ~ .rcontainer .rtitle {
+  margin-bottom: 30px;
+  font: 800 36px/100% 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: var(--title-color);
+  letter-spacing: -1px;
+}
+
+#rr_modern-loneliness a[href="https://is.gd/rossr"] ~ .rcontainer .rimg {
+  width: var(--img-width);
+  margin: var(--img-margin);
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  line-height: 0;
+  outline: 3px solid var(--border-color);
+  outline-offset: 3px;
+}
+
+#rr_modern-loneliness a[href="https://is.gd/rossr"] ~ .rcontainer .rimg img {
+  width: 100%;
+  height: var(--img-height);
+  object-fit: cover;
+  margin-bottom: 3px;
+}
+
+#rr_modern-loneliness a[href="https://is.gd/rossr"] ~ .rcontainer .rdata {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--info-bg);
+}
+
+#rr_modern-loneliness a[href="https://is.gd/rossr"] ~ .rcontainer .rdata > b {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 8px;
+  background: var(--name-bg);
+  font: 800 14px / 110% 'Karla', sans-serif;
+  text-transform: uppercase;
+  color: var(--name-color);
+}
+
+#rr_modern-loneliness a[href="https://is.gd/rossr"] ~ .rcontainer .rdata i {
+  padding: 6px 5px;
+  text-align: justify;
+  font: 10px / 100% 'Karla', serif;
+  color: var(--info-color);
+}
+
+#rr_modern-loneliness a[href="https://is.gd/rossr"] {
+  height: 12px;
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#rr_modern-loneliness:after {
+  display: block;
+  content: "「RR」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+#rr_modern-loneliness:hover::after {
+  content: "「is.gd/rossr」";
+}
