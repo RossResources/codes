@@ -1,0 +1,92 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@font-face {
+    font-family: 'Fathers';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('https://fonts.cdnfonts.com/s/107536/Fathers-BF654cd265614b2.woff') format('woff');
+}
+
+#rr_goosebumps {
+  --width: 700px;
+  --lines: #dadada;
+  position: relative;
+  font: 14px/180% 'Karla', sans-serif;
+}
+
+#rr_goosebumps a[href="https://is.gd/rossr"] ~ .rcontainer {
+  width: var(--width);
+  position: relative;
+}
+
+#rr_goosebumps a[href="https://is.gd/rossr"] ~ .rcontainer .rheader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+#rr_goosebumps a[href="https://is.gd/rossr"] ~ .rcontainer .rtitle {
+  font: 30px/100% 'Fathers', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+#rr_goosebumps a[href="https://is.gd/rossr"] ~ .rcontainer .rheader span {
+  display: block;
+  flex-grow: 1;
+  height: 1px;
+  background: var(--lines);
+}
+
+#rr_goosebumps a[href="https://is.gd/rossr"] ~ .rcontainer .rtags {
+  width: fit-content;
+  font-size: 9px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#rr_goosebumps a[href="https://is.gd/rossr"] ~ .rcontainer .rtxt {
+  margin: 30px 0;
+  text-align: justify;
+}
+
+#rr_goosebumps a[href="https://is.gd/rossr"] {
+  height: 12px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#rr_goosebumps:after {
+  display: block;
+  content: "「RR」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+#rr_goosebumps:hover::after {
+  content: "「is.gd/rossr」";
+}
