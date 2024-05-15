@@ -1,0 +1,79 @@
+/*
+
+            「 fleurie 」
+               sign
+     
+  TEMPLATE CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+*/
+
+#rfleuriesign {
+  --border-color: #191919;
+  --bg-main: #e0e0e0;
+  --bg-accent: #9a8cd2;
+  --accent: #c2b5f7;
+  --text-color: #000;
+  --text-accent: #fff;
+}
+
+#rfleuriesign .rcontainer {
+  width: 338px;
+  border: 15px solid var(--border-color);
+  background: var(--bg-main);
+  overflow: hidden;
+  color: var(--text-color);
+  box-sizing: border-box;
+  padding: 10px 10px 0 10px;
+}
+
+#rfleuriesign .rimg {
+  width: 150px;
+  height: 110px;
+  background: center/cover;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#rfleuriesign .rdesc {
+  width: 135px;
+  height: 110px;
+  border: 1px solid var(--accent);
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 12px;
+  font: 10px/120% Arial;
+  text-align: justify;
+  text-transform: lowercase;
+  margin-left: 3px;
+}
+
+#rfleuriesign .rheader {
+  width: calc(100% + 20px);
+  background: #e2e2e2;
+  opacity: .8;
+  margin-left: -10px;
+}
+
+#rfleuriesign .rheader h1 {
+  width: 100%;
+  height: 30px;
+  background: var(--bg-accent);
+  padding: 0;
+  margin: 10px 0;
+  color: var(--text-accent);
+  font: 18px/30px Arial;
+  letter-spacing: -1px;
+}
+
+#rfleuriesign:after {
+  display: block;
+  content: "「RR」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+#rfleuriesign:hover::after {
+  content: "「is.gd/rossr」";
+}
