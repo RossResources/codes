@@ -9,9 +9,6 @@
 @import url('https://fonts.cdnfonts.com/css/noto-sans');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
-:root {
-}
-
 @font-face {
   font-family: 'Hikou';
   src: url(https://file.garden/ZktnSQztXHjndGO1/Fonts/Hikou%20Regular.otf) format('woff2');
@@ -23,18 +20,20 @@
 }
 
 #rfleurie {
-  width: 600px;
-  border: 20px solid #191919;
-  background: #e0e0e0;
-  overflow: hidden;
-  color: #000;
   --lighter-color: #c2b5f7;
   --darker-color: #9a8cd2;
   --shadow-color: #40356d;
 }
 
-#rfleurie .rcontainer {
+#rfleurie > div {
   width: 600px;
+  border: 20px solid #191919;
+  background: #e0e0e0;
+  overflow: hidden;
+  color: #000;
+}
+
+#rfleurie .rcontainer {
   height: 899px;
   position: relative;
   top: 0;
@@ -101,7 +100,7 @@
   margin-top: 23px;
   box-sizing: border-box;
   padding: 25px;
-  font: 13px/153% Arial;
+  font: 13px/153% 'Noto Sans';
   text-align: justify;
   text-transform: lowercase;
 }
@@ -119,7 +118,7 @@
   margin-right: 13px;
   box-sizing: border-box;
   padding: 13px 15px;
-  font: 12.5px/135% Arial;
+  font: 12.5px/135% 'Noto Sans';
   text-align: justify;
   text-transform: lowercase;
 }
@@ -131,7 +130,7 @@
   text-align: center;
   margin-top: 2px;
   color: #fff;
-  font: 10px/13px Arial;
+  font: 10px/13px 'Noto Sans';
   letter-spacing: 1px;
 }
 
@@ -154,7 +153,7 @@
   box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
-  font: 13px/150% Arial;
+  font: 13px/150% 'Noto Sans';
   text-align: justify;
   box-sizing: border-box;
   padding: 15px;
@@ -195,7 +194,7 @@
   margin: 0;
   margin-top: 21px;
   color: #fff;
-  font: 18px/30px Arial;
+  font: 18px/30px 'Arial';
   letter-spacing: -1px;
 }
 
@@ -209,7 +208,7 @@
   width: calc(100% - 30px);
   height: 513px;
   border: 1px solid var(--lighter-color);
-  font: 12px/175% Verdana;
+  font: 13px/175% 'Noto Sans';
   overflow: auto;
   text-align: justify;
   margin-top: 15px;
