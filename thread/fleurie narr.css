@@ -1,0 +1,90 @@
+/*
+
+            「 fleurie 」
+
+  TEMPLATE CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+*/
+
+@import url('https://fonts.cdnfonts.com/css/noto-sans');
+
+#rfleurienarrar {
+    --width: 650px;
+    --lightcolor: #c2b5f7;
+    --darkercolor: #9a8cd2;
+    --shadowcolor: #40356d;
+}
+
+#rfleurienarrar b {
+    color: var(--darkercolor);
+}
+
+#rfleurienarrar .rcontainer {
+    width: var(--width);
+    padding: 20px;
+    background: #191919;
+    overflow: hidden;
+    color: #000;
+}
+
+#rfleurienarrar .rheaderimg {
+    height: 250px;
+    margin-bottom: -1px;
+    background: center/cover;
+    border: 1px solid var(--lightcolor);
+}
+
+#rfleurienarrar .rnomecontainer {
+    border: 1px solid var(--lightcolor);
+    background: #7b7b7b url(https://tamtampress.files.wordpress.com/2017/04/el-comienzo-de-una-cancic3b3n-es-como-la-primera-luz-que2c-al-iluminar-el-escenario2c-abre-el-concierto.jpg) center/cover;
+    background-blend-mode: multiply;
+}
+
+#rfleurienarrar .rnome {
+    padding: 15px 10px;
+    padding-right: 60px;
+    font: bold 70px / 70px Arial;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--lightcolor);
+    text-shadow: 75px 15px 5px var(--shadowcolor);
+    text-transform: lowercase;
+}
+
+#rfleurienarrar .rinfocontainer {
+    margin-top: 20px;
+    background: #e0e0e0;
+    padding: 21px 0;
+}
+
+#rfleurienarrar .rheader h1 {
+    width: 100%;
+    height: 30px;
+    background: var(--darkercolor);
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font: 18px / 30px 'Arial';
+    letter-spacing: -1px;
+}
+
+#rfleurienarrar .rpost {
+    border: 1px solid var(--lightcolor);
+    font: 13px / 175% 'Noto Sans';
+    overflow: auto;
+    text-align: justify;
+    margin: 15px 15px 0;
+    box-sizing: border-box;
+    padding: 25px;
+}
+
+#rfleurienarrar:after {
+    display: block;
+    content: "「RR」";
+    font: bold 7px/12px 'Arial';
+    text-transform: uppercase;
+    opacity: .7;
+}
+
+#rfleurienarrar:hover::after {
+    content: "「is.gd/rossr」";
+}
