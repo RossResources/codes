@@ -1,0 +1,147 @@
+/*
+
+            「 fleurie 」
+
+  TEMPLATE CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+*/
+
+@import url('https://fonts.cdnfonts.com/css/noto-sans');
+
+#rfleurielocal {
+  --lightcolor: #ab85c7;
+  --darkercolor: #ab85c7;
+  --shadowcolor: #ab85c7;
+}
+
+#rfleurielocal > div {
+  width: 598px;
+  border: 10px solid #191919;
+  background: #e0e0e0;
+  overflow: hidden;
+  color: #000;
+  margin: 3px 0;
+}
+
+#rfleurielocal .rcontainer {
+  width: 100%;
+  height: 460px;
+  position: relative;
+  top: 0;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+
+#rfleurielocal .rcapa {
+  width: 100%;
+  height: calc(100% - 60px);
+  box-sizing: border-box;
+  background: center/cover;
+  border: 1px solid var(--lightcolor);
+}
+
+#rfleurielocal .rnomecontainer {
+  width: 100%;
+  height: 61px;
+  box-sizing: border-box;
+  border: 1px solid var(--lightcolor);
+  margin-top: -1px;
+  background: #7b7b7b url(https://tamtampress.files.wordpress.com/2017/04/el-comienzo-de-una-cancic3b3n-es-como-la-primera-luz-que2c-al-iluminar-el-escenario2c-abre-el-concierto.jpg) center/cover;
+  background-blend-mode: multiply;
+}
+
+#rfleurielocal .rnome {
+  font: bold 40px/140% 'Arial';
+  color: transparent;
+  -webkit-text-stroke: 1px var(--lightcolor);
+  text-transform: lowercase;
+  padding: 0;
+  margin: 0;
+  text-shadow: none;
+}
+
+#rfleurielocal:hover .rcontainer {
+  position: relative;
+  top: -399px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#rfleurielocal .rinfocontainer {
+  width: 100%;
+  height: 400px;
+  border-top: 10px solid #191919;
+}
+
+#rfleurielocal .rimg {
+  width: 200px;
+  height: calc(100% - 30px);
+  background: center/cover;
+  margin: 10px 0 0 0;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid var(--lightcolor);
+  overflow: auto;
+  display: inline-block;
+}
+
+#rfleurielocal .rimg img {
+  width: 100%;
+}
+
+#rfleurielocal .rdesc {
+  width: 380px;
+  height: calc(100% - 30px);
+  margin: 10px 0 0 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#rfleurielocal .rinfo {
+  width: calc(100% - 15px);
+  padding: 10px 0 7px;
+  border: 1px solid var(--lightcolor);
+  text-transform: lowercase;
+  font: 11px/100% 'Noto Sans';
+  letter-spacing: .5px;
+  margin: 0 0 5px 0;
+}
+
+#rfleurielocal .rinfo b {
+  color: var(--darkercolor);
+}
+
+#rfleurielocal .rtxt {
+  width: calc(100% - 15px);
+  height: calc(100% - 35px);
+  padding: 15px;
+  overflow: auto;
+  box-sizing: border-box;
+  border: 1px solid var(--lightcolor);
+  font: 12px/170% 'Noto Sans';
+  text-align: justify;
+}
+
+#rfleurielocal .rimg::-webkit-scrollbar, #rfleurielocal .rtxt::-webkit-scrollbar {
+  width: 7px;
+}
+
+#rfleurielocal .rimg::-webkit-scrollbar-track, #rfleurielocal .rtxt::-webkit-scrollbar-track {
+  background: #dadada;
+}
+
+#rfleurielocal .rimg::-webkit-scrollbar-thumb, #rfleurielocal .rtxt::-webkit-scrollbar-thumb {
+  background: var(--darkercolor);
+}
+
+#rfleurielocal:after {
+  display: block;
+  content: "「RR」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+#rfleurielocal:hover::after {
+  content: "「is.gd/rossr」";
+}
