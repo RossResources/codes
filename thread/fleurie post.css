@@ -1,0 +1,117 @@
+/*
+
+「 fleurie 」
+
+TEMPLATE CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+*/
+
+@import url('https://fonts.cdnfonts.com/css/noto-sans');
+
+#rfleuriepost {
+    --width: 650px;
+    --lightcolor: #c2b5f7;
+    --darkercolor: #9a8cd2;
+    --shadowcolor: #40356d;
+}
+
+#rfleuriepost b {
+    color: var(--darkercolor);
+}
+
+#rfleuriepost .rcontainer {
+    width: var(--width);
+    padding: 20px;
+    background: #191919;
+    overflow: hidden;
+    color: #000;
+}
+
+#rfleuriepost .rheaderimg {
+    height: 250px;
+    margin-bottom: -1px;
+    background: center/cover;
+    border: 1px solid var(--lightcolor);
+}
+
+#rfleuriepost .rnomecontainer {
+    border: 1px solid var(--lightcolor);
+    background: #7b7b7b url(https://tamtampress.files.wordpress.com/2017/04/el-comienzo-de-una-cancic3b3n-es-como-la-primera-luz-que2c-al-iluminar-el-escenario2c-abre-el-concierto.jpg) center/cover;
+    background-blend-mode: multiply;
+}
+
+#rfleuriepost .rnome {
+    padding: 15px 10px;
+    font: bold 50px / 70px Arial;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--lightcolor);
+    text-transform: lowercase;
+}
+
+#rfleuriepost .rinfocontainer {
+    margin-top: 20px;
+    background: #e0e0e0;
+    padding: 21px 0;
+}
+
+#rfleuriepost .rflex {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 0 15px 15px;
+}
+
+#rfleuriepost .rflex img {
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#rfleuriepost .rflex .rdesc {
+    width: 55%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid var(--lightcolor);
+    font: 13px / 153% 'Noto Sans';
+    text-align: justify;
+    text-transform: lowercase;
+}
+
+#rfleuriepost .rheader h1 {
+    width: 100%;
+    height: 30px;
+    background: var(--darkercolor);
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font: 18px / 30px 'Arial';
+    letter-spacing: -1px;
+}
+
+#rfleuriepost .rpost {
+    border: 1px solid var(--lightcolor);
+    font: 13px / 175% 'Noto Sans';
+    overflow: auto;
+    text-align: justify;
+    margin: 15px 15px 0;
+    box-sizing: border-box;
+    padding: 25px;
+}
+
+#rfleuriepost:after {
+    display: block;
+    content: "「RR」";
+    font: bold 7px/12px 'Arial';
+    text-transform: uppercase;
+    opacity: .7;
+}
+
+#rfleuriepost:hover::after {
+    content: "「is.gd/rossr」";
+}
