@@ -1,0 +1,86 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/raleway-5');
+
+#rr_why-would-u-be-loved {
+  --width: 600px;
+  --accent: #697bb8;
+  --accent-text: #8797cc;
+  position: relative;
+  font: 13px/180% 'Noto Sans Display', sans-serif;
+}
+
+#rr_why-would-u-be-loved a[href="https://is.gd/rossr"] ~ .rcontainer {
+  width: var(--width);
+  padding: 70px 60px;
+  box-sizing: border-box;
+  position: relative;
+  border: 6px solid var(--accent);
+}
+
+#rr_why-would-u-be-loved a[href="https://is.gd/rossr"] ~ .rcontainer .rheader {
+  border-left: 6px solid var(--accent);
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  text-align: left;
+}
+
+#rr_why-would-u-be-loved a[href="https://is.gd/rossr"] ~ .rcontainer .rtitle {
+  color: var(--accent-text);
+  text-transform: lowercase;
+  font: 900 36px/120% 'Raleway', sans-serif;
+  letter-spacing: -1px;
+}
+
+#rr_why-would-u-be-loved a[href="https://is.gd/rossr"] ~ .rcontainer .rtags {
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#rr_why-would-u-be-loved a[href="https://is.gd/rossr"] ~ .rcontainer .rtxt {
+  text-align: justify;
+}
+
+#rr_why-would-u-be-loved a[href="https://is.gd/rossr"] ~ .rcontainer .rtxt b {
+  color: var(--accent-text);
+}
+
+#rr_why-would-u-be-loved a[href="https://is.gd/rossr"] {
+  height: 12px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#rr_why-would-u-be-loved:after {
+  display: block;
+  content: "「RR」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+#rr_why-would-u-be-loved:hover::after {
+  content: "「is.gd/rossr」";
+}
