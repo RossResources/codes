@@ -1,0 +1,232 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+@font-face {
+    font-family: 'Love';
+    src: url(https://file.garden/ZktnSQztXHjndGO1/Fonts/Love.ttf) format('woff2');
+}
+
+#rr_pretty-soldiers {
+    --width: 700px;
+    --text-color: #262626;
+    --bg-main: #edecec;
+    --border-color: #ae8ec1;
+    position: relative;
+    font: 15px/160% 'Karla', sans-serif;
+    color: var(--text-color);
+    letter-spacing: -.5px;
+}
+
+#rr_pretty-soldiers.sailor-moon {
+    --border-color: #bf6293;
+    --staff: url("https://i.imgur.com/ipHTHsE.png");
+}
+
+#rr_pretty-soldiers.sailor-mercury {
+    --border-color: #64a7bb;
+    --staff: url("https://i.imgur.com/mbcHqTD.png");
+}
+
+#rr_pretty-soldiers.sailor-mars {
+    --border-color: #cb4d4d;
+    --staff: url("https://i.imgur.com/Xx5GrCZ.png");
+}
+
+#rr_pretty-soldiers.sailor-jupiter {
+    --border-color: #629d67;
+    --staff: url("https://i.imgur.com/1ybV4rj.png");
+}
+
+#rr_pretty-soldiers.sailor-venus {
+    --border-color: #cba360;
+    --staff: url("https://i.imgur.com/oNuNYyZ.png");
+}
+
+body {
+    background: #b3b3b3 url(https://i.imgur.com/Z0NOU0Q.jpg) fixed center/cover !important;
+    background-blend-mode: multiply;
+}
+
+#rr_pretty-soldiers a[href="https://is.gd/rossr"] ~ .rcontainer {
+    width: var(--width);
+    padding: 20px 30px;
+    position: relative;
+    box-sizing: border-box;
+    outline: 1px solid #fff;
+    outline-offset: -10px;
+}
+
+#rr_pretty-soldiers b {
+    color: var(--text-color);
+}
+
+#rr_pretty-soldiers .rbg {
+    background: var(--border-color);
+    position: relative;
+}
+
+#rr_pretty-soldiers .rbg::before, #rr_pretty-soldiers .rbg::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+#rr_pretty-soldiers .rbg::before {
+    background: url(https://i.pinimg.com/564x/6f/eb/a5/6feba50adef2e44752329ca46af9e5b7.jpg);
+    mix-blend-mode: screen;
+    opacity: .3;
+}
+
+#rr_pretty-soldiers .rcontainer .rbg::after {
+    z-index: 5;
+    background: url(https://i.imgur.com/wwMMI2a.gif) center/cover;
+    mix-blend-mode: lighten;
+}
+
+#rr_pretty-soldiers .rheader {
+    padding: 50px 40px;
+}
+
+#rr_pretty-soldiers .rheader:not(.rfooter) .rflex {
+    margin: 30px 0 0;
+    justify-content: center;
+}
+
+#rr_pretty-soldiers .rheader:not(.rfooter) .rflex > div:not(.ricon) {
+    margin: 0 -20px;
+}
+
+#rr_pretty-soldiers .rtitle {
+    position: relative;
+    font: 58px/100% 'Love', serif;
+    letter-spacing: -2px;
+    color: #fff;
+    text-shadow: 0 0 4px;
+}
+
+#rr_pretty-soldiers a[href="https://is.gd/rossr"] ~ .rcontainer .rtxt {
+    padding: 30px;
+    background: var(--bg-main);
+    text-align: justify;
+}
+
+#rr_pretty-soldiers .rdivider {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 46px;
+    color: #fff;
+    text-shadow: 0 0 4px;
+}
+
+#rr_pretty-soldiers .rdivider::before, #rr_pretty-soldiers .rdivider::after {
+    content: "";
+    display: block;
+    width: calc(50% - 50px);
+    height: 1px;
+}
+
+#rr_pretty-soldiers .rdivider::before {
+    background: linear-gradient(90deg, transparent, #fff);
+}
+
+#rr_pretty-soldiers .rdivider::after {
+    background: linear-gradient(90deg, #fff, transparent);
+}
+
+#rr_pretty-soldiers .rsub {
+    width: 60%;
+    font-weight: bold;
+    font-size: 9px;
+    text-transform: uppercase;
+    line-height: 120%;
+    letter-spacing: 5px;
+    color: #fff;
+}
+
+#rr_pretty-soldiers .rheader.rfooter {
+    padding: 20px;
+}
+
+#rr_pretty-soldiers .rflex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#rr_pretty-soldiers .ricon {
+    --icon-size: 100px;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    position: relative;
+}
+
+#rr_pretty-soldiers .ricon img {
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    object-fit: cover;
+    box-sizing: border-box;
+    border-radius: 100%;
+    border: 2px solid #efefef;
+}
+
+#rr_pretty-soldiers .rfooter {
+    padding: 20px 0 10px;
+}
+
+#rr_pretty-soldiers .rfooter .rsub {
+    width: 60%;
+    padding: 30px 0;
+    margin: 0 20px;
+}
+
+#rr_pretty-soldiers .rfooter .rdivider {
+    margin-top: 30px;
+}
+
+#rr_pretty-soldiers .rstaff {
+    width: 70px;
+    height: 140px;
+    background: var(--staff) center/cover;
+}
+
+#rr_pretty-soldiers a[href="https://is.gd/rossr"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#rr_pretty-soldiers:after {
+    display: block;
+    content: "「RR」";
+    font: bold 7px/12px 'Arial';
+    text-transform: uppercase;
+    opacity: .7;
+}
+
+#rr_pretty-soldiers:hover::after {
+    content: "「is.gd/rossr」";
+}
