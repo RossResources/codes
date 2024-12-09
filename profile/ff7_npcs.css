@@ -1,0 +1,234 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.cdnfonts.com/css/thegoodmonolith');
+@import url('https://fonts.cdnfonts.com/css/freemono');
+
+#rr_ff7-npcs {
+  --width: 800px;
+  --img-size: 100px;
+  --accent: #5096ff;
+  --bg-accent: #3254a5;
+  --accent-shadow: #1a76ff3b;
+  --bg-img-overlay: #0d101e;
+  --text-bg-accent: #fff;
+  --font-main: 'Karla', sans-serif;
+  --font-size: 14px;
+  --line-spacing: 170%;
+  --text-color: #fff;
+  position: relative;
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer {
+  width: var(--width);
+  position: relative;
+  backdrop-filter: blur(2px);
+  background: var(--bg-img-overlay) url(https://static.square-enix-games.com/ffviir-backdrops/ffviir-zoom-midgar-city.jpg) fixed center / cover !important;
+  background-blend-mode: multiply;
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rwrapper {
+  padding: 60px;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(180deg, rgb(84 96 165 / 20%) 0%, rgb(64 62 134 / 9%) 100%);
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rwrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, var(--accent-shadow), transparent);
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rdot {
+  position: absolute;
+  z-index: 1;
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rdot::before,
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rdot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rdot::before {
+  width: 1px;
+  height: 100px;
+  background: linear-gradient(transparent, var(--accent), transparent);
+  transform: translatey(-50%);
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rdot::after {
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  transform: translatex(-50%);
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rdot:nth-child(1) {
+  top: 60px;
+  left: 60px;
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rdot:nth-child(2) {
+  bottom: 61px;
+  left: 60px;
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rdot:nth-child(3) {
+  bottom: 61px;
+  right: 61px;
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rheader {
+  padding: 60px 30px 80px;
+  text-align: left;
+  position: relative;
+  margin-bottom: -2px;
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rheader::before {
+  content: "";
+  width: 480px;
+  height: 300px;
+  border: solid var(--accent);
+  border-width: 1px 0 0 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rdiv {
+  width: 285px;
+  height: 1px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 97px;
+  right: -41px;
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rdiv::before {
+  content: "";
+  width: 280px;
+  height: 1px;
+  background: var(--accent);
+  position: absolute;
+  left: 5px;
+  top: 0;
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rheader span {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: calc(100% - 250px);
+  padding: 10px 30px 10px 80px;
+  margin-left: -60px;
+  background: linear-gradient(90deg, var(--bg-accent) 30%, transparent);
+  font: 40px/100% 'TheGoodMonolith', monospace;
+  text-transform: uppercase;
+  color: var(--text-bg-accent);
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rheader b {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  margin-top: 20px;
+  margin-left: 23px;
+  width: calc(100% - 250px);
+  font: bold 12px/100% 'Free Mono', monospace;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--text-bg-accent);
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rtxt-container {
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 40px 40px;
+  position: relative;
+  border: solid var(--accent);
+  border-width: 0 1px 1px;
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rtxt-container img {
+  width: 250px;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+  transition: all .6s ease;
+}
+
+#rr_ff7-npcs:hover a[href="https://is.gd/rossr"] ~ .rcontainer .rtxt-container img {
+  filter: grayscale(0);
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rtxt {
+  height: 100%;
+  overflow: auto;
+  padding-right: 15px;
+  text-align: justify;
+  font: var(--font-size)/var(--line-spacing) var(--font-main);
+  color: var(--text-color);
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] ~ .rcontainer .rtxt b {
+  padding: 1px 4px;
+  background: var(--bg-accent);
+  font-family: 'Free Mono', monospace;
+  letter-spacing: 1px;
+}
+
+#rr_ff7-npcs a[href="https://is.gd/rossr"] {
+  height: 12px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#rr_ff7-npcs *::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+#rr_ff7-npcs *::-webkit-scrollbar-thumb {
+  background: var(--bg-accent);
+  border: 5px solid transparent;
+  background-clip: content-box;
+}
+
+#rr_ff7-npcs:after {
+  display: block;
+  content: "「RR」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+#rr_ff7-npcs:hover::after {
+  content: "「is.gd/rossr」";
+}
