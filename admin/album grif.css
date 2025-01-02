@@ -19,7 +19,6 @@
   #ralbumgrif .rtitle {
     font: italic 120px/100% 'Welcome';
     color: var(--title-color);
-    text-shadow: 3px 1px #000;
     margin: 40px 0 10px;
   }
   
@@ -77,18 +76,13 @@
   #ralbumgrif .rb1 .rimgcont {
     width: 200px;
     height: 371px;
+    margin: 12px 12px;
+    position: relative;
   }
   
   #ralbumgrif .rb2 .rimgcont {
     width: 320px;
     height: 257px;
-  }
-  
-  #ralbumgrif .rb1 .rimgcont {
-    margin: 12px 12px;
-  }
-  
-  #ralbumgrif .rb2 .rimgcont {
     margin: 3px 3px;
   }
   
@@ -149,7 +143,7 @@
     transition: all .7s ease-in-out;
   }
   
-  #ralbumgrif .rhover div {
+  #ralbumgrif .rhover .rname + div {
     width: 100%;
     box-sizing: border-box;
     padding: 20px 20px;
@@ -164,28 +158,28 @@
     transition: all .7s ease-in-out;
   }
   
-  #ralbumgrif .rb1 .rhover div {
+  #ralbumgrif .rb1 .rhover .rname +  div {
     height: 320px;
     top: -376px;
   }
   
-  #ralbumgrif .rb2 .rhover div {
+  #ralbumgrif .rb2 .rhover .rname +  div {
     height: 200px;
     top: -262px;
   }
   
-  #ralbumgrif .rimgcont:hover .rhover div {
+  #ralbumgrif .rimgcont:hover .rhover .rname +  div {
     opacity: 1;
   }
   
-  #ralbumgrif .rhover div::-webkit-scrollbar {
+  #ralbumgrif .rhover .rname +  div::-webkit-scrollbar {
     width: 12px;
     background: #00000082;
     background-clip: content-box;
     border: 3px solid transparent;
   }
   
-  #ralbumgrif .rhover div::-webkit-scrollbar-thumb {
+  #ralbumgrif .rhover .rname +  div::-webkit-scrollbar-thumb {
     background: #000;
     background-clip: content-box;
     border: 5px solid transparent;
@@ -195,14 +189,13 @@
     display: block;
     content: "「R」";
     font: bold 8px/12px Consolas;
-    color: #8e8e8e;
     text-transform: uppercase;
     letter-spacing: -.5px;
-    opacity: .3;
+    opacity: .5;
   }
   
   #ralbumgrif:hover::after {
-    content: "「ROSS @ FÊNIX GRAPHIC」";
+    content: "「ROSS RESOURCES」";
   }
   
   /* latin-ext */
@@ -247,5 +240,5 @@
   
   @font-face {
     font-family: 'Welcome';
-    src: url(https://dl.dropbox.com/s/sercx89r7ljanu1/Welcome.ttf) format('woff');
+    src: url(https://file.garden/ZktnSQztXHjndGO1/Fonts/Welcome.ttf) format('woff');
   }
