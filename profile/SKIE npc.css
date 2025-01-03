@@ -1,0 +1,191 @@
+/*
+
+            「 skie 」
+     
+  TEMPLATE CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+          
+*/
+
+/* latin-ext */
+@font-face {
+  font-family: 'Cuprum';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Cuprum Bold Italic'), local('Cuprum-BoldItalic'), url(https://fonts.gstatic.com/s/cuprum/v10/dg4h_pLmvrkcOkBNI9P7iqwkawcegg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cuprum';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Cuprum Bold Italic'), local('Cuprum-BoldItalic'), url(https://fonts.gstatic.com/s/cuprum/v10/dg4h_pLmvrkcOkBNI9P7iqwqawc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+#rskienpc {
+  width: 600px;
+  color: #000;
+  --skiecor: #e4c6b0;
+}
+
+#rskienpc .rcapa {
+  height: 300px;
+  background: #cecece center/cover;
+  background-clip: content-box;
+  background-blend-mode: multiply;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+#rskienpc input[type="checkbox"] {
+  display: none;
+}
+
+#rskienpc label {
+  cursor: crosshair;
+}
+
+#rskienpc .rtitle {
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  mix-blend-mode: lighten;
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  transform: scale(1);
+  background: #fff;
+  transition: transform .6s ease-in-out .3s, opacity .6s ease-in-out .3s;
+}
+
+#rskienpc .rtitle t {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+#rskienpc .rtitle b {
+  font: 700 72px/75% Cuprum;
+  text-transform: uppercase;
+  letter-spacing: -7px;
+}
+
+#rskienpc .rtitle i::before {
+  display: block;
+  width: calc(100% - 150px);
+  height: 1px;
+  background: #000;
+  content: "";
+  margin-top: 7px;
+}
+
+#rskienpc .rtitle i {
+  font: italic 13px/250% Times;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+}
+
+#rskienpc input[type="checkbox"]:checked ~ label .rtitle {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform .6s ease-in-out, opacity .3s ease-in-out .2s;
+}
+
+#rskienpc .rfichaclick {
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #fff;
+  box-sizing: border-box;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform .6s ease-in-out, opacity .6s ease-in-out;
+}
+
+#rskienpc input[type="checkbox"]:checked ~ label .rfichaclick {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform .6s ease-in-out .6s, opacity .3s ease-in-out .6s;
+}
+
+#rskienpc .rheader {
+  width: 57%;
+  height: 100%;
+  display: inline-block;
+}
+
+#rskienpc .rimg {
+  width: 100%;
+  height: 100%;
+  background: center/cover;
+  position: relative;
+}
+
+#rskienpc .rbasics {
+  width: 60%;
+  border: 1px solid var(--skiecor);
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: #fff;
+  font: italic 12px/140% Times;
+  text-transform: lowercase;
+  letter-spacing: 1.7px;
+  word-spacing: -1px;
+  text-align: right;
+  padding: 10px 15px;
+}
+
+#rskienpc .rbasics i {
+  font: bold italic 16px/150% Times;
+  letter-spacing: 0;
+  color: var(--skiecor);
+}
+
+#rskienpc .rscroll {
+  width: 43%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 25px 0;
+}
+
+#rskienpc .rscroll::-webkit-scrollbar {
+  width: 0;
+}
+
+#rskienpc .rinfo {
+  width: calc(50% - 10px);
+  margin-bottom: 24px;
+  font: 11px/200% Verdana;
+  text-transform: lowercase;
+}
+
+#rskienpc .rinfo i {
+  display: inline-block;
+  font: italic 13px/200% Times;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  color: var(--skiecor);
+  border-bottom: 3px solid var(--skiecor);
+  margin-bottom: 5px;
+}
+
+#rskienpc:after {
+  display: block;
+  content: "「R」";
+  font: bold 8px/12px Consolas;
+  color: #8e8e8e;
+  text-transform: uppercase;
+  letter-spacing: -.5px;
+  opacity: .4;
+}
+
+#rskienpc:hover::after {
+  content: "「ROSS @ FÊNIX GRAPHIC」";
+}
