@@ -1,0 +1,141 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=DM+Serif+Display&display=swap');
+
+#rr_artificial-city-npcs {
+  --main-font: 'ABeeZee', sans-serif;
+  position: relative;
+  margin: 30px 0;
+}
+
+body {
+  background: #818181 url(https://wallpapercrafter.com/desktop/40551-New-York-City-USA-Travel-Tourism.jpg) fixed center/cover !important;
+  background-blend-mode: multiply;
+}
+
+body.rdark #rr_artificial-city-npcs {
+  --width: 700px;
+  --border-color: #90b19b;
+  --bg-color: #2e2d2d;
+  --wave-color: #bf846b;
+  --lines: #787573;
+  --accent: #93c7a4;
+  color: #d7d7d7;
+}
+
+body.rlight #rr_artificial-city-npcs {
+  --width: 700px;
+  --border-color: #b5d1c0;
+  --bg-color: #e7e6e1;
+  --wave-color: #d99c82;
+  --lines: #ada7a3;
+  --accent: #74a988;
+  color: #000;
+}
+
+#rr_artificial-city-npcs a[href="https://is.gd/rossr"] ~ .rwrapper {
+  width: var(--width);
+  background: var(--border-color);
+  padding: 25px;
+}
+
+#rr_artificial-city-npcs a[href="https://is.gd/rossr"] ~ .rwrapper .rcontainer {
+  background: var(--bg-color);
+  box-shadow: 0 0 10px #00000026;
+}
+
+#rr_artificial-city-npcs .rcontainer svg {
+  fill: var(--wave-color);
+}
+
+#rr_artificial-city-npcs .rcontainer svg:last-child {
+  transform: rotate(180deg);
+  margin-bottom: -8px;
+}
+
+#rr_artificial-city-npcs .rtitle {
+  padding: 15px 15px 10px;
+  margin: -30px 70px 0;
+  font: bold 50px/100% 'DM Serif Display', serif;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: var(--wave-color);
+}
+
+#rr_artificial-city-npcs i.cp {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 40px;
+  color: var(--wave-color);
+}
+
+#rr_artificial-city-npcs .rsub {
+  margin: 0 0 25px;
+  font: 700 9px/100% "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+#rr_artificial-city-npcs .rdesc {
+  padding: 30px 15px 15px;
+  margin: 15px 70px;
+  border: solid var(--lines);
+  border-width: 1px 0;
+}
+
+#rr_artificial-city-npcs .rdesc img {
+  width: 200px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 5px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+#rr_artificial-city-npcs .rtxt {
+  font: 13px/175% var(--main-font);
+  letter-spacing: .5px;
+  text-align: justify;
+}
+
+#rr_artificial-city-npcs .rtxt b {
+  color: var(--accent);
+}
+
+#rr_artificial-city-npcs a[href="https://is.gd/rossr"] {
+  height: 12px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#rr_artificial-city-npcs:after {
+  display: block;
+  content: "「RR」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+#rr_artificial-city-npcs:hover::after {
+  content: "「is.gd/rossr」";
+}
