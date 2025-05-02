@@ -1,0 +1,121 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+@font-face {
+    font-family: "NT Josefine";
+    src: url(https://dl.dropbox.com/s/0030yodvnm0stgb/Pistilli-Roman.otf);
+    format("truetype");
+}
+
+#rr_love-on-the-brain {
+  --width: 700px;
+  --bg-color: #e1e0dc;
+  --borders: #adadad;
+  --accent: #cfab5d;
+  --text-color: #282828;
+  position: relative;
+  font: 14px/170% 'Karla', sans-serif;
+  color: var(--text-color);
+}
+
+#rr_love-on-the-brain a[href="https://is.gd/rossr"] ~ .rcontainer {
+  width: var(--width);
+  position: relative;
+  padding: 5px;
+}
+
+#rr_love-on-the-brain a[href="https://is.gd/rossr"] ~ .rcontainer .rwrapper {
+  background: var(--bg-color);
+  outline: 1px solid var(--borders);
+  outline-offset: -20px;
+}
+
+#rr_love-on-the-brain .rheader {
+  padding: 60px 0;
+  border: 1px solid transparent;
+}
+
+#rr_love-on-the-brain .rtitle {
+  margin: 10px 0 5px;
+  font: 100px/100% 'NT Josefine', serif;
+  color: var(--accent);
+  text-shadow: 0 0 3px;
+}
+
+#rr_love-on-the-brain .rsub {
+  font: 8px/100% 'Arial', serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+#rr_love-on-the-brain .rflex {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --icon-size: 80px;
+}
+
+#rr_love-on-the-brain .rflex::before, #rr_love-on-the-brain .rflex::after {
+  content: "";
+  display: block;
+  width: calc(100% - var(--icon-size)*6);
+  height: 1px;
+  background: var(--borders);
+}
+
+#rr_love-on-the-brain .rflex img {
+  display: block;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 0 8px;
+}
+
+#rr_love-on-the-brain .rtxt {
+  padding: 30px 60px 40px;
+  text-align: justify;
+}
+
+#rr_love-on-the-brain .rtxt b {
+  color: var(--accent);
+}
+
+#rr_love-on-the-brain a[href="https://is.gd/rossr"] {
+  height: 12px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#rr_love-on-the-brain:after {
+  display: block;
+  content: "「RR」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+#rr_love-on-the-brain:hover::after {
+  content: "「is.gd/rossr」";
+}
