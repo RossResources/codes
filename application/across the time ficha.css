@@ -1,0 +1,661 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Noto+Serif+Display:ital,wght@1,900&display=swap');
+
+#r2202_across-the-time-ficha {
+  --width: 750px;
+  --height: 850px;
+  --angle: 160deg;
+  --image-size: 250px;
+  --background: #efefef;
+  --bg-color: #e3dcd2;
+  --text-bg-color: #dfd6cfe3;
+  --accent: #618e93;
+  --text-color: #000;
+  --main-img: url(https://64.media.tumblr.com/027ad210304d13c83424e1c0fb35e74e/3027b7f271098acc-dd/s1280x1920/2ea846b4d16b17d1339b2199be5f9a63afaef513.jpg);
+  --main-img-hover: url(https://i.pinimg.com/originals/00/0f/01/000f01c549721f7af500aec72467fc8c.png);
+  --second-img: url(https://64.media.tumblr.com/21fbd3374ba187b497205b16eeb48893/be5ebaa4d803be21-b0/s400x600/2551c7c53e3f8bf9b4f8b9a583d794f33a761609.png);
+  --second-img-hover: url(https://64.media.tumblr.com/66d1d9ecd55fe4a05fec4171794b861f/545714e22a2fa786-ef/s400x600/2e9c9463ba5ffc02b12733b28fe5e667bf1a67f0.png);
+  --third-img: url(https://64.media.tumblr.com/21fbd3374ba187b497205b16eeb48893/be5ebaa4d803be21-b0/s400x600/2551c7c53e3f8bf9b4f8b9a583d794f33a761609.png);
+  width: var(--width);
+  font-family: 'ABeeZee';
+  font-size: 13px;
+  color: #000;
+  white-space: normal;
+}
+
+#r2202_across-the-time-ficha div {
+  transition: all .6s ease;
+}
+
+#r2202_across-the-time-ficha *::-webkit-scrollbar {
+  width: 8px;
+  background: var(--background);
+}
+
+#r2202_across-the-time-ficha *::-webkit-scrollbar-thumb {
+  background: var(--bg-color);
+  border: 2px solid var(--background);
+}
+
+#r2202_across-the-time-ficha .rcontainer, #r2202_across-the-time-ficha .rtab-content {
+  width: var(--width);
+  height: var(--height);
+  background: linear-gradient(130deg, var(--bg-color), #181818);
+  position: relative;
+  overflow: hidden;
+}
+
+#r2202_across-the-time-ficha .rcontainer::before, #r2202_across-the-time-ficha .rtab-content::before {
+  content: "";
+  background: linear-gradient(180deg, transparent, var(--bg-color) 30%);
+  opacity: .3;
+  mix-blend-mode: hard-light;
+  outline-offset: 5px;
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+}
+
+#r2202_across-the-time-ficha .rcontainer::after, #r2202_across-the-time-ficha .rtab-content::after {
+  content: "";
+  border: 15px solid var(--background);
+  outline: 1px solid var(--background);
+  opacity: .8;
+  mix-blend-mode: luminosity;
+  outline-offset: 5px;
+  position: absolute;
+  inset: 25px;
+}
+
+#r2202_across-the-time-ficha .rtop {
+  width: 100%;
+  height: 100%;
+  background: url(https://i.imgur.com/EyuzLR3.png) center/cover;
+  -webkit-mask-image: linear-gradient(var(--angle), black 45%, transparent 70%);
+  mask-image: linear-gradient(var(--angle), black, transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#r2202_across-the-time-ficha .rbottom {
+  width: 100%;
+  height: 100%;
+  background: url(https://i.imgur.com/Q7IGWDr.png) center/cover;
+  -webkit-mask-image: linear-gradient(var(--angle), transparent 35%, black 90%);
+  mask-image: linear-gradient(var(--angle), transparent 35%, black 90%);
+  filter: contrast(.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#r2202_across-the-time-ficha:hover .rbottom {
+  background-image: url(https://i.imgur.com/zbwyFqX.png);
+}
+
+#r2202_across-the-time-ficha .rwrap {
+  height: 100%;
+  position: relative;
+}
+
+#r2202_across-the-time-ficha .rwrap .rmain-img, #r2202_across-the-time-ficha .rwrap .rmain-circle {
+  width: var(--image-size);
+  height: var(--image-size);
+  padding: 5px;
+  border: 45px solid #0000002b;
+  border-radius: 100%;
+  position: absolute;
+  top: 200px;
+  left: 280px;
+}
+
+#r2202_across-the-time-ficha .rwrap .rmain-img {
+  background: var(--main-img) center/cover;
+  background-clip: content-box;
+}
+
+#r2202_across-the-time-ficha:hover .rwrap .rmain-img {
+  background-image: var(--main-img-hover);
+}
+
+#r2202_across-the-time-ficha .rwrap .rsecond-img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 109px;
+  left: 182px;
+  padding: 5px;
+  border-radius: 100%;
+  border: 25px solid #0000002b;
+  -webkit-mask-image: radial-gradient(circle at 140% 135%,transparent 51%,black 52%);
+  mask-image: radial-gradient(circle at 140% 135%,transparent 51%,black 52%);
+}
+
+#r2202_across-the-time-ficha .rwrap .rsecond-img div {
+  width: 100%;
+  height: 100%;
+  background: var(--second-img) center/cover;
+  border-radius: 100%;
+  transition-delay: .1s;
+}
+
+#r2202_across-the-time-ficha:hover .rwrap .rsecond-img div {
+  background-image: var(--second-img-hover);
+}
+
+#r2202_across-the-time-ficha .rwrap > .rtitle {
+  position: absolute;
+  top: 105px;
+  left: 400px;
+  font: italic 900 63px/100% 'Noto Serif Display', serif;
+  color: var(--accent);
+  text-align: right;
+  transform: rotate(3deg);
+  opacity: .8;
+}
+
+#r2202_across-the-time-ficha .rwrap > .rtitle b {
+  display: inline-block;
+}
+
+#r2202_across-the-time-ficha .rwrap > .rtitle b:nth-child(1) {
+  transform: rotate(-10deg) translate(0px, 4px);
+}
+
+#r2202_across-the-time-ficha .rwrap > .rtitle b:nth-child(2) {
+  transform: rotate(0deg) translate(0px, 0px);
+}
+
+#r2202_across-the-time-ficha .rwrap > .rtitle b:nth-child(3) {
+  transform: rotate(5deg) translate(0px, 4px);
+}
+
+#r2202_across-the-time-ficha .rwrap > .rtitle b:nth-child(4) {
+  transform: rotate(15deg) translate(6px, 12px);
+}
+
+#r2202_across-the-time-ficha .rwrap > .rtitle b:nth-child(5) {
+  transform: rotate(25deg) translate(10px, 20px);
+}
+
+#r2202_across-the-time-ficha .rwrap > .rtitle b:nth-child(6) {
+  transform: rotate(35deg) translate(20px, 30px);
+}
+
+#r2202_across-the-time-ficha .rwrap > .rtitle b:nth-child(7) {
+  transform: rotate(45deg) translate(36px, 42px);
+}
+
+#r2202_across-the-time-ficha .rwrap .rclock {
+  width: 950px;
+  height: 950px;
+  background: url(https://i.imgur.com/BRiRVMC.png) center/cover;
+  position: absolute;
+  bottom: -480px;
+  left: -325px;
+  letter-spacing: -10px;
+  text-align: right;
+  mix-blend-mode: multiply;
+  opacity: .5;
+}
+
+#r2202_across-the-time-ficha:hover .rwrap .rclock {
+  transform: rotate(180deg);
+}
+
+#r2202_across-the-time-ficha .rwrap > .rdec::before {
+  content: "";
+  display: block;
+  width: var(--image-size);
+  height: var(--image-size);
+  padding: 70px;
+  border: 10px solid #0000002b;
+  border-radius: 100%;
+  position: absolute;
+  top: 175px;
+  left: 250px;
+  -webkit-mask-image: conic-gradient(from 132deg, transparent 60%, black 60%, black 68%, transparent 81%);
+  mask-image: conic-gradient(from 132deg, transparent 60%, black 60%, black 71%, transparent 71%);
+}
+
+#r2202_across-the-time-ficha .rwrap > .rdec::after {
+  content: "";
+  display: block;
+  width: var(--image-size);
+  height: var(--image-size);
+  padding: 70px;
+  border: 10px solid #0000002b;
+  border-radius: 100%;
+  position: absolute;
+  top: 175px;
+  left: 250px;
+  -webkit-mask-image: conic-gradient(from 195deg, transparent 65%, black 75%, black 81%, transparent 81%);
+  mask-image: conic-gradient(from 132deg, transparent 60%, black 60%, black 71%, transparent 71%);
+}
+
+#r2202_across-the-time-ficha .rwrap > i.fas.fa-hourglass-half {
+  position: absolute;
+  top: 275px;
+  right: 100px;
+  transform: rotate(336deg);
+  font-size: 40px;
+  color: #0000008c;
+}
+
+#r2202_across-the-time-ficha .rtab > input {
+  display: none;
+}
+
+#r2202_across-the-time-ficha .rtab > label.rbutton {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  cursor: pointer;
+  background: var(--bg-color);
+  border-radius: 100%;
+  color: #0000008c;
+  font-size: 28px;
+  outline: 3px solid #e3dcd27d;
+  outline-offset: 3px;
+  transition: all .4s ease;
+}
+
+#r2202_across-the-time-ficha .rtab > label:hover {
+  transform: scale(1.3) rotate(-35deg);
+}
+
+#r2202_across-the-time-ficha .rtab:nth-child(1) > label.rbutton {
+  top: 342px;
+  right: 453px;
+}
+
+#r2202_across-the-time-ficha .rtab:nth-child(2) > label.rbutton {
+  top: 434px;
+  right: 429px;
+}
+
+#r2202_across-the-time-ficha .rtab:nth-child(3) > label.rbutton {
+  top: 503px;
+  right: 358px;
+}
+
+#r2202_across-the-time-ficha .rtab:nth-child(4) > label.rbutton {
+  top: 531px;
+  right: 256px;
+}
+
+#r2202_across-the-time-ficha .rtab:nth-child(5) > label.rbutton {
+  top: 499px;
+  right: 155px;
+}
+
+#r2202_across-the-time-ficha .rtab-content {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#r2202_across-the-time-ficha .rtab > label.rclosebutton {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 70px;
+  left: calc(50% - 25px);
+  z-index: 6;
+  cursor: pointer;
+  background: var(--bg-color);
+  border-radius: 100%;
+  color: #0000008c;
+  font-size: 28px;
+  outline: 3px solid #e3dcd27d;
+  outline-offset: 3px;
+  visibility: hidden;
+  transition: all .4s ease;
+}
+
+#r2202_across-the-time-ficha .rtab:nth-child(1) .rbottom, #r2202_across-the-time-ficha .rtab:nth-child(2) .rbottom {
+  filter: contrast(.6) brightness(1.5);
+}
+
+#r2202_across-the-time-ficha .rtab:nth-child(1) > label.rclosebutton {
+  top: 475px;
+  left: 315px;
+}
+
+#r2202_across-the-time-ficha .rtab:nth-child(2) > label.rclosebutton {
+  top: 525px;
+  left: 115px;
+}
+
+#r2202_across-the-time-ficha .rtab:nth-child(3) > label.rclosebutton {
+  top: 560px;
+  left: 255px;
+}
+
+#r2202_across-the-time-ficha .rtab:nth-child(4) > label.rclosebutton {
+  top: 690px;
+  left: 295px;
+}
+
+#r2202_across-the-time-ficha .rtab:nth-child(5) > label.rclosebutton {
+  top: 590px;
+  left: 295px;
+}
+
+#r2202_across-the-time-ficha input:checked ~ .rtab-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+#r2202_across-the-time-ficha input:checked ~ .rtab-content .rclock {
+  transform: rotate(225deg);
+}
+
+#r2202_across-the-time-ficha input:checked ~ label.rclosebutton {
+  visibility: visible;
+}
+
+#r2202_across-the-time-ficha .rwrap .rmain-circle {
+  background: #0000002b;
+  background-clip: padding-box;
+  backdrop-filter: blur(3px);
+}
+
+#r2202_across-the-time-ficha .rwrap .rbasics {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#r2202_across-the-time-ficha .rwrap .rbasics div {
+  margin: 7px 0 0;
+}
+
+#r2202_across-the-time-ficha .rwrap .rbasics .rsubtitle {
+  font-size: 40px;
+} 
+
+#r2202_across-the-time-ficha .rwrap .rsubtitle {
+  display: block;
+  margin-bottom: 8px;
+  font: italic 900 32px/80% 'Noto Serif Display', serif;
+  color: var(--text-color);
+  letter-spacing: -3px;
+  opacity: .8;
+}
+
+#r2202_across-the-time-ficha .rwrap .rbasics div b {
+  padding: 3px 10px 4px;
+  border-radius: 5px;
+  background: var(--accent);
+  font: bold 9px/150% 'Calibri', sans-serif;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#r2202_across-the-time-ficha .rwrap .rbasics div i {
+  padding: 4px 5px 3px;
+  font: bold 11.7px/150% 'ABeeZee', sans-serif;
+  color: var(--text-color);
+  letter-spacing: .5px;
+}
+
+#r2202_across-the-time-ficha .rtab .rvantagens, #r2202_across-the-time-ficha .rtab .rdesvantagens {
+  width: 300px;
+  height: 300px;
+  background: #0000002b;
+  backdrop-filter: blur(3px);
+  border-radius: 100%;
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  letter-spacing: .8px;
+  line-height: 130%;
+  opacity: .8;
+}
+
+#r2202_across-the-time-ficha .rtab .rvantagens {
+  top: 100px;
+  right: 300px;
+}
+
+#r2202_across-the-time-ficha .rtab .rdesvantagens {
+  top: 350px;
+  right: 80px;
+}
+
+#r2202_across-the-time-ficha .rtab .rvantagens div, #r2202_across-the-time-ficha .rtab .rdesvantagens div {
+  max-height: 270px;
+  overflow: auto;
+}
+
+#r2202_across-the-time-ficha .rtab i.fas {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: var(--bg-color);
+  border-radius: 100%;
+  color: #0000008c;
+  font-size: 28px;
+  outline: 3px solid #e3dcd27d;
+  outline-offset: 3px;
+}
+
+#r2202_across-the-time-ficha .rtab .rvantagens i.fas {
+  top: 100px;
+  left: -20px;
+}
+
+#r2202_across-the-time-ficha .rtab .rdesvantagens i.fas {
+  top: 210px;
+  right: 5px;
+}
+
+#r2202_across-the-time-ficha .rtab .rbox {
+  position: relative;
+  border-radius: 5px;
+  background: var(--bg-color);
+  border: 20px solid var(--bg-color);
+  font: 13px/160% 'ABeeZee', sans-serif;
+  letter-spacing: .8px;
+  color: var(--text-color);
+  text-align: justify;
+}
+
+#r2202_across-the-time-ficha .rtab .rdescricoes {
+  width: calc(50% - 80px);
+  margin: 80px 10px 0;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  z-index: 5;
+}
+
+#r2202_across-the-time-ficha .rtab .raparencia, #r2202_across-the-time-ficha .rtab .rpersonalidade {
+  margin-bottom: 15px;
+}
+
+#r2202_across-the-time-ficha .rtab .rpersonalidade {
+  margin-top: 170px;
+}
+
+#r2202_across-the-time-ficha .rtab .rbox > p {
+  max-height: 300px;
+  overflow: auto;
+  margin: 5px 0;
+  padding: 8px 13px;
+  font: 13px/160% 'ABeeZee', sans-serif;
+}
+
+#r2202_across-the-time-ficha .rtab .rqualidades, #r2202_across-the-time-ficha .rtab .rdefeitos {
+  font-size: 12px;
+}
+
+#r2202_across-the-time-ficha .rtab .rbox .rmini-title {
+  display: inline-block;
+  border-radius: 7px;
+  background: var(--accent);
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+#r2202_across-the-time-ficha .rtab .rbox div.rmini-title {
+  padding: 3px 10px;
+  position: absolute;
+  z-index: 5;
+  top: -32px;
+  left: 5px;
+}
+
+#r2202_across-the-time-ficha .rtab .rdescricoes *:nth-child(1) {
+  margin-bottom: 25px;
+}
+
+#r2202_across-the-time-ficha .rtab:nth-child(3) .rtab-content i.fas {
+  top: 150px;
+  right: 290px;
+  z-index: 6;
+  transform: scale(1.3);
+  background: #ddc4a1;
+  outline: 4px solid #ddc4a199;
+  filter: brightness(.9) contrast(1.3);
+}
+
+#r2202_across-the-time-ficha .rwrap .rthird-img {
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  top: 55px;
+  right: 100px;
+  padding: 5px;
+  border-radius: 100%;
+  border: 20px solid #0000002b;
+}
+
+#r2202_across-the-time-ficha .rwrap .rthird-img div {
+  width: 100%;
+  height: 100%;
+  background: var(--third-img) center/cover;
+  border-radius: 100%;
+}
+
+#r2202_across-the-time-ficha .rtab .ratrib {
+  width: 230px;
+  height: 230px;
+  background: #0000002b;
+  backdrop-filter: blur(3px);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  letter-spacing: .8px;
+  line-height: 130%;
+}
+
+#r2202_across-the-time-ficha .rtab .ratrib b {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+}
+
+#r2202_across-the-time-ficha .rhab {
+  width: 100%;
+  height: 20px;
+  margin: 7px 0;
+  background: var(--background);
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#r2202_across-the-time-ficha .rhab span {
+  font: bold 9px/100% 'Calibri', sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+#r2202_across-the-time-ficha .rhab p.rpoint {
+  width: calc(20% - 1px);
+  height: 20px;
+  background: #90b5b9;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+#r2202_across-the-time-ficha .rhab p.rpoint:nth-child(2) {
+  left: 0;
+}
+
+#r2202_across-the-time-ficha .rhab p.rpoint:nth-child(3) {
+  left: 20%;
+}
+
+#r2202_across-the-time-ficha .rhab p.rpoint:nth-child(4) {
+  left: 40%;
+}
+
+#r2202_across-the-time-ficha .rhab p.rpoint:nth-child(5) {
+  left: 60%;
+}
+
+#r2202_across-the-time-ficha .rhab p.rpoint:nth-child(6) {
+  left: 80%;
+}
+
+#r2202_across-the-time-ficha:after {
+  display: block;
+  content: "「R」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .3;
+}
+
+#r2202_across-the-time-ficha:hover::after {
+  content: "「ROSS RESOURCES」";
+}

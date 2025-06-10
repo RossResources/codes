@@ -1,0 +1,167 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Noto+Serif+Display:ital,wght@1,900&display=swap');
+
+#r2202_across-the-time-narr {
+  --width: 740px;
+  --image-size: 140px;
+  --background: #efefef;
+  --bg-color: #e3dcd2;
+  --text-bg-color: #dfd6cfe3;
+  --accent: #618e93;
+  --text-color: #000;
+  white-space: normal;
+}
+
+#r2202_across-the-time-narr .rcontainer {
+  width: var(--width);
+  margin: 25px 0 0;
+  background: var(--bg-color);
+  position: relative;
+  overflow: hidden;
+}
+
+#r2202_across-the-time-narr .rcontainer::before {
+  content: "";
+  border: 15px solid var(--background);
+  outline: 1px solid var(--background);
+  outline-offset: 5px;
+  position: absolute;
+  z-index: 1;
+  inset: 25px;
+  mix-blend-mode: luminosity;
+}
+
+#r2202_across-the-time-narr .rheader {
+  height: 400px;
+  position: relative;
+  background: url(https://i.imgur.com/sO3Ypwf.png) center/cover;
+  -webkit-mask-image: linear-gradient(180deg, black 45%, transparent);
+  mask-image: linear-gradient(180deg, black 45%, transparent);
+}
+
+#r2202_across-the-time-narr .rheader img {
+  width: var(--image-size);
+  height: var(--image-size);
+  object-fit: cover;
+  border-radius: 100%;
+  padding: 5px;
+  border: 30px solid #0000002b;
+  position: absolute;
+  top: 107px;
+  left: 170px;
+}
+
+#r2202_across-the-time-narr .rheader > span {
+  width: 150px;
+  position: absolute;
+  top: 150px;
+  left: 400px;
+}
+
+#r2202_across-the-time-narr .rheader > span i {
+  display: block;
+  font: bold 10px/100% 'Calibri', sans-serif;
+  color: var(--text-color);
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#r2202_across-the-time-narr .rheader > span b {
+  display: block;
+  margin-top: 15px;
+  font: italic 900 60px/100% 'Noto Serif Display', serif;
+  color: var(--accent);
+  letter-spacing: -5px;
+  text-align: right;
+}
+
+#r2202_across-the-time-narr .rtxt {
+  position: relative;
+  z-index: 1;
+  padding: 30px 30px 15px;
+  margin: -70px 70px -70px;
+  border-radius: 5px;
+  background: var(--text-bg-color);
+  font: 13px/180% 'ABeeZee', sans-serif;
+  letter-spacing: .8px;
+  color: var(--text-color);
+  text-align: justify;
+  white-space: break-spaces;
+}
+
+#r2202_across-the-time-narr .rfooter {
+  height: 250px;
+  position: relative;
+  background: linear-gradient(0deg, #d1c9bf, var(--bg-color));
+}
+
+#r2202_across-the-time-narr .rfooter > span {
+  width: 220px;
+  position: absolute;
+  top: 100px;
+  left: 90px;
+}
+
+#r2202_across-the-time-narr .rfooter > span b {
+  display: block;
+  background: var(--accent);
+  padding: 7px 7px 6px;
+  border-radius: 5px;
+  font: bold 10px/100% 'Calibri', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #fff;
+  opacity: .8;
+}
+
+#r2202_across-the-time-narr .rfooter > span i {
+  display: block;
+  font: italic 900 40px/140% 'Noto Serif Display', serif;
+  color: var(--text-color);
+  letter-spacing: -4px;
+  opacity: .5;
+}
+
+#r2202_across-the-time-narr .rfooter::after {
+  content: "";
+  display: block;
+  width: 740px;
+  height: 600px;
+  background: url(https://i.imgur.com/xLYyr3e.png) center/cover;
+  mix-blend-mode: multiply;
+  filter: contrast(4) invert(1);
+  opacity: .4;
+  position: absolute;
+  bottom: -300px;
+  right: -200px;
+}
+
+#r2202_across-the-time-narr:after {
+  display: block;
+  content: "「R」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .3;
+}
+
+#r2202_across-the-time-narr:hover::after {
+  content: "「ROSS RESOURCES」";
+}

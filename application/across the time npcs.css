@@ -1,0 +1,229 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Noto+Serif+Display:ital,wght@1,900&display=swap');
+
+#r2202_across-the-time-npc {
+  --width: 410px;
+  --height: 500px;
+  --angle: 160deg;
+  --image-size: 240px;
+  --background: #efefef;
+  --bg-color: #e3dcd2;
+  --text-bg-color: #dfd6cfe3;
+  --accent: #618e93;
+  --text-color: #000;
+  --main-img: url(https://i.pinimg.com/originals/b3/59/99/b359990c86c02d82d1d743fb7fcbad13.jpg);
+  --main-img-hover: url(https://i.pinimg.com/736x/cf/b4/2b/cfb42b440145a7b3833dddc9e8b00efe.jpg);
+  width: var(--width);
+  font-family: 'ABeeZee';
+  font-size: 13px;
+  color: #000;
+  white-space: normal;
+  display: inline-block;
+}
+
+#r2202_across-the-time-npc div {
+  transition: all .6s ease;
+}
+
+#r2202_across-the-time-npc .rcontainer, #r2202_across-the-time-npc .rtab-content {
+  width: var(--width);
+  height: var(--height);
+  background: linear-gradient(130deg, var(--bg-color), #181818);
+  position: relative;
+  overflow: hidden;
+}
+
+#r2202_across-the-time-npc .rcontainer::before, #r2202_across-the-time-npc .rtab-content::before {
+  content: "";
+  background: linear-gradient(180deg, transparent, var(--bg-color) 30%);
+  opacity: .3;
+  mix-blend-mode: hard-light;
+  outline-offset: 5px;
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+}
+
+#r2202_across-the-time-npc .rcontainer::after, #r2202_across-the-time-npc .rtab-content::after {
+  content: "";
+  border: 15px solid var(--background);
+  outline: 1px solid var(--background);
+  opacity: .8;
+  mix-blend-mode: luminosity;
+  outline-offset: 5px;
+  position: absolute;
+  inset: 10px;
+}
+
+#r2202_across-the-time-npc .rtop {
+  width: 100%;
+  height: 100%;
+  background: url(https://i.imgur.com/EyuzLR3.png) center/cover;
+  -webkit-mask-image: linear-gradient(var(--angle), black 45%, #000000b8 70%);
+  mask-image: linear-gradient(var(--angle), black 45%, #000000b8 70%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#r2202_across-the-time-npc .rbottom {
+  width: 100%;
+  height: 100%;
+  background: url(https://i.imgur.com/Q7IGWDr.png) center/cover;
+  -webkit-mask-image: linear-gradient(var(--angle), transparent 35%, black 90%);
+  mask-image: linear-gradient(var(--angle), transparent 35%, black 90%);
+  filter: contrast(.7);
+  opacity: .6;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#r2202_across-the-time-npc:hover .rbottom {
+  background-image: url(https://i.imgur.com/zbwyFqX.png);
+}
+
+#r2202_across-the-time-npc .rwrap {
+  height: 100%;
+  position: relative;
+}
+
+#r2202_across-the-time-npc .rwrap .rmain-circle {
+  width: var(--image-size);
+  height: var(--image-size);
+  padding: 5px;
+  background: #0000002b;
+  background-clip: padding-box;
+  backdrop-filter: blur(3px);
+  border: 15px solid #0000002b;
+  border-radius: 100%;
+  position: absolute;
+  top: 115px;
+  left: 120px;
+}
+
+#r2202_across-the-time-npc .rwrap .rsecond-img {
+  width: 115px;
+  height: 115px;
+  position: absolute;
+  z-index: 5;
+  top: 35px;
+  left: 35px;
+  padding: 5px;
+  border-radius: 100%;
+  border: 15px solid #0000002b;
+  -webkit-mask-image: radial-gradient(circle at 160% 155%,transparent 51%,black 52%);
+  mask-image: radial-gradient(circle at 140% 135%,transparent 51%,black 52%);
+}
+
+#r2202_across-the-time-npc .rwrap .rsecond-img div {
+  width: 100%;
+  height: 100%;
+  background: var(--main-img) center/cover;
+  border-radius: 100%;
+  transition-delay: .1s;
+}
+
+#r2202_across-the-time-npc:hover .rwrap .rsecond-img div {
+  background-image: var(--main-img-hover);
+}
+
+#r2202_across-the-time-npc .rwrap .rclock {
+  width: 700px;
+  height: 700px;
+  background: url(https://i.imgur.com/BRiRVMC.png) center/cover;
+  position: absolute;
+  bottom: -300px;
+  left: -300px;
+  letter-spacing: -10px;
+  text-align: right;
+  mix-blend-mode: multiply;
+  opacity: .4;
+}
+
+#r2202_across-the-time-npc:hover .rwrap .rclock {
+  transform: rotate(180deg);
+}
+
+#r2202_across-the-time-npc .rtab-content .rclock {
+  transform: rotate(225deg);
+}
+
+#r2202_across-the-time-npc .rwrap .rbasics {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#r2202_across-the-time-npc .rwrap .rscroll {
+  height: 0;
+  transform: scaley(0);
+  overflow: hidden;
+}
+
+#r2202_across-the-time-npc:hover .rwrap .rscroll {
+  height: auto;
+  transform: scaley(100%);
+}
+
+#r2202_across-the-time-npc .rwrap .rbasics div {
+  margin: 5px 0 0;
+}
+
+#r2202_across-the-time-npc .rwrap .rsubtitle {
+  display: block;
+  margin-bottom: 3px;
+  font: italic 900 40px/80% 'Noto Serif Display', serif;
+  color: var(--text-color);
+  letter-spacing: -3px;
+  opacity: .8;
+}
+
+#r2202_across-the-time-npc .rwrap .rbasics div b {
+  padding: 3px 10px 4px;
+  border-radius: 5px;
+  background: var(--accent);
+  font: bold 9px/150% 'Calibri', sans-serif;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#r2202_across-the-time-npc .rwrap .rbasics div i {
+  padding: 4px 5px 3px;
+  font: bold 11.7px/150% 'ABeeZee', sans-serif;
+  color: var(--text-color);
+  letter-spacing: .5px;
+}
+
+#r2202_across-the-time-npc:after {
+  display: block;
+  content: "「R」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .3;
+}
+
+#r2202_across-the-time-npc:hover::after {
+  content: "「ROSS RESOURCES」";
+}
