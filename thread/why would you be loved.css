@@ -21,6 +21,7 @@
 
 #rr_why-would-u-be-loved {
   --width: 600px;
+  --img-height: 200px;
   --accent: #697bb8;
   --accent-text: #8797cc;
   position: relative;
@@ -40,6 +41,12 @@
   margin-bottom: 20px;
   padding: 10px 20px;
   text-align: left;
+}
+
+#rr_why-would-u-be-loved a[href="https://is.gd/rossr"] ~ .rcontainer .rheader img {
+  width: 100%;
+  height: var(--img-height);
+  object-fit: cover;
 }
 
 #rr_why-would-u-be-loved a[href="https://is.gd/rossr"] ~ .rcontainer .rtitle {
