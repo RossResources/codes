@@ -1,0 +1,964 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                     https://rossresources.tumblr.com/
+   
+              TEMPLATE CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap');
+
+#rlittlesomething {
+  width: 670px;
+  font: 12px/120% 'Roboto';
+  position: relative;
+  --cellWidth: 250px;
+  --cellHeight: 460px;
+  --notchWidth: 80px;
+  --appSize: 33px;
+}
+
+#rlittlesomething .rcell {
+  width: var(--cellWidth);
+  height: var(--cellHeight);
+  background: linear-gradient(75deg, #000, #171717) fixed;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 10px 7px 20px;
+  position: relative;
+  margin-left: -70px;
+}
+
+#rlittlesomething .rcontainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+#rlittlesomething input[type="checkbox"] {
+  display: none;
+}
+
+#rlittlesomething > label {
+  width: var(--cellWidth);
+  height: var(--cellHeight);
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: calc(50% - var(--cellWidth)/2);
+  cursor: pointer;
+}
+
+#rlittlesomething .rcellsclock {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #636363 center/cover;
+  background-blend-mode: multiply;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  transition: all .7s ease;
+  transition-delay: .2s;
+}
+
+#rlittlesomething .rtop {
+  width: calc(100% - 14px);
+  height: 20px;
+  background: #00000024;
+  color: #dadada;
+  font: 600 11px/185% 'Roboto';
+  position: absolute;
+  top: 10px;
+  z-index: 5;
+  margin-bottom: 50px;
+}
+
+#rlittlesomething .rtop date {
+  width: calc(50% - var(--notchWidth)/2);
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+
+#rlittlesomething .rnotch {
+  width: var(--notchWidth);
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  background: linear-gradient(75deg, #000, #171717) fixed;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+  border-radius: 0 0 35% 35%;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  padding: 8px 0 0;
+}
+
+#rlittlesomething .rnotch::before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 17px;
+  height: 3px;
+  background: repeating-linear-gradient(45deg, #2f2f2f 3px, #3c3c3c 7px);
+  border-radius: 3px;
+}
+
+#rlittlesomething .rnotch::after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 7px;
+  height: 7px;
+  background: radial-gradient(#353535, #232323);
+  border: 1px solid #232323;
+  box-sizing: border-box;
+  border-radius: 100%;
+  margin: -2px 0 0 7px;
+}
+
+#rlittlesomething .rtop batt {
+  width: calc(50% - var(--notchWidth)/2);
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+}
+
+#rlittlesomething .rtop batt::after {
+  width: 15px;
+  height: 15px;
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+  background: url(https://i.imgur.com/ROkR6Oz.png) center/cover;
+  opacity: .8;
+}
+
+#rlittlesomething .rhoursday {
+  margin-top: 70px;
+  height: 110px;
+  color: #fff;
+  font-size: 11px;
+  font-family: 'Heebo';
+}
+
+#rlittlesomething .rhoursday hours {
+  display: block;
+  font-weight: 100;
+  font-size: 70px;
+  letter-spacing: -3px;
+  line-height: 100%;
+}
+
+#rlittlesomething .rhoursday b {
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+#rlittlesomething .rnotifs {
+  width: 100%;
+  position: absolute;
+  bottom: 110px;
+}
+
+#rlittlesomething .rnot {
+  min-height: 58px;
+  margin: 2px 0;
+  background: #f9f9f9;
+  color: #000;
+  padding: 5px;
+  text-align: left;
+}
+
+#rlittlesomething .rnot > span {
+  display: block;
+  padding: 0 5px;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+#rlittlesomething .rnot span .cp {
+  color: #909090;
+  font-size: 13px;
+  padding-right: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#rlittlesomething .rnot img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100%;
+  float: left;
+  margin: -5px 10px 0 5px;
+}
+
+#rlittlesomething .rswipe {
+  width: 100%;
+  padding: 7px 0;
+  background: #0000007a;
+  position: absolute;
+  bottom: 55px;
+  opacity: .6;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+#rlittlesomething .rswipe::after {
+  content: "Swipe up to unlock";
+}
+
+#rlittlesomething .rbottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+#rlittlesomething .rbottom::after {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  content: "\e9e5";
+  font-size: 25px;
+  opacity: .5;
+  transition: all .2s ease;
+  font-family: 'cappuccicons'!important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#rlittlesomething .rcell:hover .rbottom::after {
+  opacity: .8;
+}
+
+#rlittlesomething .runlocked {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 55px 0 0;
+  background: center/cover;
+  position: relative;
+  bottom: 0;
+  transition: all .7s ease;
+  transition-delay: .2s;
+}
+
+#rlittlesomething > input:checked ~ label ~ .rcell .rcellsclock {
+  bottom: var(--cellHeight);
+  transition-delay: .6s;
+}
+
+#rlittlesomething > input:checked ~ label ~ .rcell .runlocked {
+  bottom: var(--cellHeight);
+  transition-delay: .6s;
+}
+
+#rlittlesomething .rhrs {
+  font: 100 56px/90% 'Heebo';
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+#rlittlesomething .rmeteorol {
+  font: 14px/40% 'Heebo';
+  color: #fff;
+}
+
+#rlittlesomething .rmeteorol .cp {
+  font-size: 16px;
+  padding: 0 10px 0 0;
+  position: relative;
+  top: 2px;
+}
+
+#rlittlesomething .rapps {
+  height: 80px;
+  margin: 35px 0 0;
+  position: relative;
+  z-index: 2;
+  padding: 35px 0;
+}
+
+#rlittlesomething .rapp {
+  display: inline-block;
+}
+
+#rlittlesomething .rapps .ricon {
+  width: 85px;
+  height: 85px;
+  border: 5px solid var(--accent);
+  background: center/cover;
+  border-radius: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 33px;
+  left: calc(50% - 85px/2);
+  z-index: 3;
+}
+
+#rlittlesomething .rapps .rapp > label {
+  width: var(--appSize);
+  height: var(--appSize);
+  background: var(--accent);
+  cursor: pointer;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 100%;
+  padding: 7px 0;
+  color: transparent;
+  font-size: 19px;
+  position: absolute;
+  transition: all .3s ease;
+}
+
+#rlittlesomething .runlocked:hover .rapp > label {
+  color: #fff;
+}
+
+#rlittlesomething .rapps .rapp > label:hover {
+  color: #000;
+  transform: scale(1.5);
+}
+
+#rlittlesomething .rapp:nth-child(2) > label {
+  top: 23px;
+  left: calc(50% - var(--appSize)/2);
+}
+
+#rlittlesomething .rapp:nth-child(3) > label {
+  top: 33px;
+  left: calc(60% - var(--appSize)/2);
+}
+
+#rlittlesomething .rapp:nth-child(4) > label {
+  top: calc(50% - var(--appSize)/2);
+  left: 58%;
+}
+
+#rlittlesomething .rapp:nth-child(5) > label {
+  top: calc(45% + var(--appSize)/2);
+  left: calc(60% - var(--appSize)/2);
+}
+
+#rlittlesomething .rapp:nth-child(6) > label {
+  top: calc(51% + var(--appSize)/2);
+  left: calc(50% - var(--appSize)/2);
+}
+
+#rlittlesomething .rapp:nth-child(7) > label {
+  top: calc(45% + var(--appSize)/2);
+  left: calc(40% - var(--appSize)/2);
+}
+
+#rlittlesomething .rapp:nth-child(8) > label {
+  top: calc(50% - var(--appSize)/2);
+  left: calc(36% - var(--appSize)/2);
+}
+
+#rlittlesomething .rapp:nth-child(9) > label {
+  top: 33px;
+  left: calc(40% - var(--appSize)/2);
+}
+
+#rlittlesomething .runlocked:hover .rapp:nth-child(2) > label {
+  top: -10px;
+  left: calc(50% - var(--appSize)/2);
+}
+
+#rlittlesomething .runlocked:hover .rapp:nth-child(3) > label {
+  top: 10px;
+  left: calc(71% - var(--appSize)/2);
+}
+
+#rlittlesomething .runlocked:hover .rapp:nth-child(4) > label {
+  top: calc(50% - var(--appSize)/2);
+  left: 72%;
+}
+
+#rlittlesomething .runlocked:hover .rapp:nth-child(5) > label {
+  top: calc(63% + var(--appSize)/2);
+  left: calc(71% - var(--appSize)/2);
+}
+
+#rlittlesomething .runlocked:hover .rapp:nth-child(6) > label {
+  top: calc(75% + var(--appSize)/2);
+  left: calc(50% - var(--appSize)/2);
+}
+
+#rlittlesomething .runlocked:hover .rapp:nth-child(7) > label {
+  top: calc(63% + var(--appSize)/2);
+  left: calc(29% - var(--appSize)/2);
+}
+
+#rlittlesomething .runlocked:hover .rapp:nth-child(8) > label {
+  top: calc(50% - var(--appSize)/2);
+  left: calc(21% - var(--appSize)/2);
+}
+
+#rlittlesomething .runlocked:hover .rapp:nth-child(9) > label {
+  top: 10px;
+  left: calc(29% - var(--appSize)/2);
+}
+
+#rlittlesomething .ropenapp {
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  transform: scale(0);
+  transition: all .4s ease;
+}
+
+#rlittlesomething > input:checked ~ .ropenapp {
+  transform: scale(1);
+}
+
+#rlittlesomething > input:checked ~ .rmessages {
+  transition-delay: .7s;
+}
+
+#rlittlesomething > input:checked ~ .rcalls {
+  transition-delay: 1.5s;
+}
+
+#rlittlesomething > input:checked ~ .rmusic {
+  transition-delay: .9s;
+}
+
+#rlittlesomething > input:checked ~ .rnotes {
+  transition-delay: 1.3s;
+}
+
+#rlittlesomething > input:checked ~ .rphotos {
+  transition-delay: 1.9s;
+}
+
+#rlittlesomething .rmint {
+  text-transform: uppercase;
+  font: 500 9px/7px 'Poppins';
+  letter-spacing: 1px;
+}
+
+#rlittlesomething .rmessages {
+  width: 180px;
+  height: 200px;
+  background: #171717;
+  box-shadow: 3px 3px 5px #0000007a;
+  color: #e0e0e0;
+  top: 85px;
+  left: 0;
+}
+
+#rlittlesomething .ruser {
+  height: 40px;
+  padding: 5px;
+}
+
+#rlittlesomething .ruser img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 100%;
+  float: left;
+  margin-left: 5px;
+  position: relative;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+#rlittlesomething .ruser div {
+  width: calc(100% - 60px);
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  transform: translatey(-50%);
+  text-align: left;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#rlittlesomething .rconv {
+  width: 100%;
+  height: calc(100% - 50px);
+  box-sizing: border-box;
+  padding: 10px;
+  background: center/cover;
+  overflow: auto;
+  font-size: 11px;
+  line-height: 11px;
+}
+
+#rlittlesomething .rconv span {
+  width: 100%;
+  min-height: 25px;
+  display: block;
+  line-height: 100%;
+}
+
+#rlittlesomething .rconv b, #rlittlesomething .rconv i {
+  max-width: 80%;
+  display: inline-block;
+  padding: 5px 8px;
+  margin: 2px 0;
+  border-radius: 5px;
+}
+
+#rlittlesomething .rconv b {
+  float: left;
+  text-align: left;
+  background: #fff;
+  color: #000;
+  font-weight: normal;
+}
+
+#rlittlesomething .rconv i {
+  float: right;
+  text-align: right;
+  background: var(--messages);
+  color: #fff;
+  font-style: normal;
+}
+
+#rlittlesomething .rconv img {
+  max-width: 85%;
+  border-radius: 5px;
+}
+
+#rlittlesomething .rcalls {
+  width: 165px;
+  height: 160px;
+  background: #f5f5f5;
+  box-shadow: 3px 3px 3px #00000059;
+  top: 300px;
+  left: 5px;
+  padding: 7px;
+}
+
+#rlittlesomething .rcalls .rmint {
+  text-align: left;
+  padding: 0 3px;
+}
+
+#rlittlesomething .rcalls .rlist {
+  height: calc(100% - 10px);
+  overflow: auto;
+  padding: 0 3px;
+}
+
+#rlittlesomething .rcall {
+  height: 45px;
+  border-bottom: 1px solid #dadada;
+  position: relative;
+}
+
+#rlittlesomething .rcall:last-child {
+  border-bottom: 0;
+}
+
+#rlittlesomething .rcall::after {
+  content: "\ebeb";
+  font-size: 14px;
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - 7px);
+  right: 2px;
+  font-family: 'cappuccicons'!important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#rlittlesomething .rcall.received::after {
+  color: #3c903c;
+}
+
+#rlittlesomething .rcall.missed::after {
+  color: #da2121;
+}
+
+#rlittlesomething .rcall img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 100%;
+  float: left;
+  position: relative;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+#rlittlesomething .rcall div {
+  display: inline-block;
+  width: calc(100% - 50px);
+  position: relative;
+  top: 50%;
+  transform: translatey(-50%);
+  text-align: left;
+  margin-right: 15px;
+}
+
+#rlittlesomething .rcall b {
+  display: block;
+  line-height: 13px;
+  font-size: 13px;
+}
+
+#rlittlesomething .rcall i {
+  display: block;
+  line-height: 10px;
+  font-size: 9px;
+  font-style: normal;
+}
+
+#rlittlesomething .rcall.missed i {
+  color: #da2121;
+}
+
+#rlittlesomething .rmusic {
+  width: 180px;
+  height: 75px;
+  color: #e0e0e0;
+  top: 50px;
+  right: 75px;
+}
+
+#rlittlesomething .rmusic::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #171717 65%, transparent);
+}
+
+#rlittlesomething .rmus img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  float: right;
+}
+
+#rlittlesomething .rmus > span {
+  display: block;
+  width: calc(100% - 55px);
+  text-transform: uppercase;
+  font: 500 7px/10px 'Poppins';
+  letter-spacing: 1px;
+  position: absolute;
+  top: 6px;
+}
+
+#rlittlesomething .rmus span.cp.cp-spotify {
+  font-size: 11px;
+  float: left;
+  position: relative;
+  left: 6px;
+  top: -1px;
+}
+
+#rlittlesomething .rmus marquee {
+  width: calc(100% - 100px);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#rlittlesomething .rmus b {
+  font-size: 14px;
+}
+
+#rlittlesomething .rmus i.rmint {
+  display: block;
+  width: calc(100% - 50px);
+  position: absolute;
+  bottom: 30px;
+}
+
+#rlittlesomething .rmus .rplay {
+  width: 15px;
+  height: 15px;
+  background: url(https://dl.dropbox.com/s/zyzntefti17wv0a/pause.svg) center/cover;
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 35px);
+}
+
+#rlittlesomething .rmus .rplay::before, #rlittlesomething .rmus .rplay::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: center/cover;
+  position: absolute;
+  bottom: 0;
+}
+
+#rlittlesomething .rmus .rplay::before {
+  background-image: url(https://dl.dropbox.com/s/70m4aziijvu34d7/skip-back.svg);
+  left: -20px;
+}
+
+#rlittlesomething .rmus .rplay::after {
+  background-image: url(https://dl.dropbox.com/s/cpjzsj3xojyzrc9/skip-forward.svg);
+  right: -20px;
+}
+
+#rlittlesomething .rnotes {
+  width: 210px;
+  background: #ffdd40;
+  top: 130px;
+  right: 23px;
+  text-align: left;
+  padding: 5px 10px;
+}
+
+#rlittlesomething .rnotes ul {
+  margin: 10px 0;
+  padding-inline-start: 7px;
+  padding-inline-end: 7px;
+  list-style-type: none;
+  height: 30px;
+  overflow: auto;
+}
+
+#rlittlesomething .rnotes li::before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 7px;
+  height: 7px;
+  border: 2px solid #00000075;
+  border-radius: 2px;
+  margin-right: 7px;
+  position: relative;
+  top: 1px;
+}
+
+#rlittlesomething .rphotos {
+  width: 230px;
+  top: 200px;
+  right: 0;
+  background: #f5f5f5;
+  padding: 0 5px 15px;
+}
+
+#rlittlesomething .rphotos .rmint {
+  padding: 10px 5px;
+  text-align: left;
+}
+
+#rlittlesomething .rphotos .rmint ~ div {
+  height: 215px;
+  overflow: auto;
+}
+
+#rlittlesomething .rphotos img {
+  width: 100px;
+  height: 100px;
+  margin: 2px;
+  object-fit: cover;
+  object-position: center;
+}
+
+#rlittlesomething .rgoogle input {
+  width: 80%;
+  border: 0;
+  border-radius: 15px;
+  position: absolute;
+  z-index: 1;
+  top: calc(100% - 50px);
+  left: 10%;
+  box-sizing: border-box;
+  background: #dcdcdc;
+  padding: 7px 10px 6px;
+  transition: all .5s ease;
+}
+
+#rlittlesomething .rgoogle label::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(https://dl.dropbox.com/s/tw5gzfbr8qq5a9w/google.svg) center/cover;
+  position: absolute;
+  top: calc(100% - 44px);
+  left: 13%;
+  z-index: 3;
+  transition: all .5s ease;
+}
+
+#rlittlesomething .rgoogle label::after {
+  content: "\eb82";
+  font-size: 16px;
+  color: #000;
+  padding-top: 1px;
+  position: absolute;
+  top: calc(100% - 44px);
+  right: 13%;
+  z-index: 3;
+  transition: all .5s ease;
+  font-family: 'cappuccicons'!important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#rlittlesomething .rgoogle input:focus {
+  width: 100%;
+  top: 20px;
+  left: 0;
+  border-radius: 0;
+  outline: 0;
+  padding: 10px 35px;
+  z-index: 3;
+}
+
+#rlittlesomething .rgoogle input:focus ~ label::before {
+  top: 29px;
+  left: 13px;
+}
+
+#rlittlesomething .rgoogle input:focus ~ label::after {
+  top: 29px;
+  right: 13px;
+}
+
+#rlittlesomething .rrecentsearch {
+  width: 0;
+  height: calc(var(--cellHeight) - 35px);
+  overflow: auto;
+  background: #dcdcdc;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  transform: scale(0);
+  transition: all .7s ease;
+}
+
+#rlittlesomething .rgoogle input:focus ~ .rrecentsearch {
+  width: 100%;
+  transform: scale(1);
+  top: 35px;
+}
+
+#rlittlesomething .rsearch {
+  width: calc(100% - 25px);
+  text-align: left;
+  margin: 20px 0;
+}
+
+#rlittlesomething .rsearch:nth-child(1) {
+  margin-top: 15px;
+}
+
+#rlittlesomething .rrecentsearch::before {
+  width: calc(100% - 25px);
+  height: 1px;
+  display: block;
+  content: "";
+  background: #bdbdbd;
+  margin: 20px 0 10px;
+}
+
+#rlittlesomething .rsearch::before {
+  content: "\ea00";
+  padding-right: 10px;
+  position: relative;
+  top: 1px;
+  font-family: 'cappuccicons'!important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#rlittlesomething .rsearch::after {
+  content: "\e920";
+  float: right;
+  position: relative;
+  top: 1px;
+  font-family: 'cappuccicons'!important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#rlittlesomething *::-webkit-scrollbar {
+  width: 6px;
+  background: #00000045;
+}
+
+#rlittlesomething *::-webkit-scrollbar-thumb {
+  background: #d8d8d8;
+  border: 1px solid #000000a6;
+  border-radius: 10px;
+}
+
+#rlittlesomething:after {
+  display: block;
+  content: "「R」";
+  font: bold 8px/12px 'Consolas';
+  color: #8e8e8e;
+  text-transform: uppercase;
+  opacity: .5;
+  margin-left: -70px;
+}
+
+#rlittlesomething:hover::after {
+  content: "「ROSS RESOURCES」";
+}
