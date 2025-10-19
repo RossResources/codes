@@ -1,0 +1,146 @@
+/*
+
+            「 hocus-pocus 」
+     
+  TEMPLATE CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+          
+*/
+
+@font-face {
+    font-family: "headline";
+    src: url(https://dl.dropbox.com/s/sq6bzhx9bje37cc/HEADOH__.TTF);
+    format("truetype");
+}
+
+#rhocuspocus {
+  --width: 768px;
+  --w-article-img: 310px;
+  --bg-color: #eee7d5;
+  --border-color: #150f0f;
+  --text-color: #000;
+  --grayscale: 1;
+  --sepia: .6;
+  width: var(--width);
+  color: var(--text-color);
+}
+
+#rhocuspocus .rheader {
+  position: relative;
+  font: bold 11px/15px Courier New;
+  text-transform: uppercase;
+}
+
+#rhocuspocus .rheader img {
+  width: 100%;
+}
+
+#rhocuspocus .rdata {
+  position: absolute;
+  bottom: 3px;
+  left: 35px;
+}
+
+#rhocuspocus .redicao {
+  position: absolute;
+  bottom: 3px;
+  right: 35px;
+  font-style: italic;
+}
+
+#rhocuspocus .rtexto h1 {
+  margin: 10px 0;
+  font: 125px/105px Headline;
+  color: var(--border-color);
+  text-align: left;
+}
+
+#rhocuspocus .rtexto h1 b {
+  font-weight: 500;
+  padding: 5px 7px 0 10px;
+  background: var(--border-color);
+  color: var(--bg-color);
+  display: inline-block;
+  margin: 0 0 5px 0;
+}
+
+#rhocuspocus .rtexto h1 img {
+  float: right;
+  width: 300px;
+  filter: grayscale(var(--grayscale)) sepia(var(--sepia));
+  margin-left: 5px;
+}
+
+#rhocuspocus .rcontainer {
+  width: calc(100% - 44px);
+  background: var(--bg-color);
+  padding: 20px 0;
+  border: 2px solid var(--border-color);
+  outline: 20px solid var(--bg-color);
+}
+
+#rhocuspocus .rtexto {
+  width: 95%;
+  font: 13px/21px Ubuntu;
+  text-align: justify;
+}
+
+#rhocuspocus .rtexto hr {
+  border-top: 2px solid var(--border-color);
+}
+
+#rhocuspocus .rtexto .rmateria {
+  margin: 15px 0;
+}
+
+#rhocuspocus .rtexto .rmateria h2 {
+  font: 700 23px/25px Podkova;
+  letter-spacing: -1.3px;
+  text-transform: uppercase;
+}
+
+#rhocuspocus .rtexto .rmateria h2:before {
+  width: 30px;
+  height: 14px;
+  display: inline-block;
+  content: "";
+  margin-right: 12px;
+  background: url(https://i.imgur.com/rQhqWLP.png) center/cover;
+}
+
+#rhocuspocus .rtexto .rmateria h2 {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  color: var(--border-color);
+}
+
+#rhocuspocus .rtexto .rdesc {
+  font: 13px/21px Ubuntu;
+  text-align: justify;
+}
+
+#rhocuspocus .rtexto .rmateria:nth-of-type(odd) .rdesc {
+  margin-right: 20px;
+}
+
+#rhocuspocus .rtexto .rmateria:nth-of-type(even) img {
+  margin-right: 20px;
+}
+
+#rhocuspocus .rtexto .rmateria img {
+  width: var(--w-article-img);
+  margin-top: 10px;
+  filter: grayscale(var(--grayscale)) sepia(var(--sepia));
+}
+
+#rhocuspocus:after {
+  content: "「R」";
+  font: bold 8px/12px Consolas;
+  color: #8e8e8e;
+  text-transform: uppercase;
+  letter-spacing: -.5px;
+  opacity: .4;
+}
+
+#rhocuspocus:hover::after {
+  content: "「ROSS RESOURCES」";
+}
