@@ -1,0 +1,264 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Raleway:wght@100;400&display=swap');
+
+@keyframes rconceived-in-the-sky-rotate {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+#rr_no-mans-land {
+    --width: 700px;
+    --img-size: 150px;
+    --border-thickness: 14px;
+    --border-base-color: #202a1d;
+    --background: #141813;
+    --lines: #ffffff4a;
+    --text-color: #dadada;
+    --text-accent-background-color: #74a374;
+    --text-accent-text-color: #000;
+    --text-italic-color: #b3dbb3;
+    position: relative;
+}
+
+#rr_no-mans-land a[href="https://is.gd/rossr"] ~ .rwrap, #rr_no-mans-land a[href="https://is.gd/rossc"] ~ .rwrap {
+    width: var(--width);
+    position: relative;
+    padding: 40px;
+    color: var(--text-color);
+}
+
+#rr_no-mans-land .rdec {
+    text-align: left;
+    position: absolute;
+    inset: 15px;
+}
+
+#rr_no-mans-land .rdec::before, #rr_no-mans-land .rdec::after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+#rr_no-mans-land .rdec.rtop::before, #rr_no-mans-land .rdec.rtop::after {
+    top: 0;
+    left: 0;
+}
+
+#rr_no-mans-land .rdec.rbot::before, #rr_no-mans-land .rdec.rbot::after {
+    bottom: 0;
+    right: 0;
+}
+
+#rr_no-mans-land .rdec::before {
+    width: 80%;
+    height: var(--border-thickness);
+}
+
+#rr_no-mans-land .rdec::after {
+    width: var(--border-thickness);
+    height: 80%;
+}
+
+#rr_no-mans-land .rdec.rtop::before {
+    background: linear-gradient(90deg, var(--border-base-color) 30%, transparent);
+}
+
+#rr_no-mans-land .rdec.rtop::after {
+    background: linear-gradient(180deg, var(--border-base-color) 30%, transparent);
+}
+
+#rr_no-mans-land .rdec.rbot::before {
+    background: linear-gradient(-90deg, var(--border-base-color) 30%, transparent);
+}
+
+#rr_no-mans-land .rdec.rbot::after {
+    background: linear-gradient(0deg, var(--border-base-color) 30%, transparent);
+}
+
+#rr_no-mans-land .rcontainer {
+    padding: 40px 50px 30px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+}
+
+#rr_no-mans-land .rtitle {
+    margin: 40px 0 50px;
+    font: 100 32px/100% 'Raleway', sans-serif;
+    text-transform: lowercase;
+    letter-spacing: .5px;
+}
+
+#rr_no-mans-land .rtitle::before, #rr_no-mans-land .rtitle::after {
+    content: "";
+    display: block;
+    width: 85%;
+    height: 1px;
+    padding: 0;
+    margin: 20px auto;
+    background: linear-gradient(90deg, transparent, transparent, #fff, transparent, transparent);
+    opacity: .6;
+}
+
+#rr_no-mans-land .rtxt {
+    padding: 0 25px;
+    font: 12px/180% 'Karla', sans-serif;
+    letter-spacing: .5px;
+    text-align: justify;
+}
+
+#rr_no-mans-land .rtxt b {
+    color: var(--text-accent-background-color);
+}
+
+#rr_no-mans-land .rtxt i {
+    color: var(--text-italic-color);
+}
+
+#rr_no-mans-land .rtxt::first-letter {
+    float: left;
+    margin: 5px 20px 5px 0;
+    padding: 15px 20px;
+    border: 1px solid var(--text-color);
+    font: 100 36px/100% 'Raleway', sans-serif;
+}
+
+#rr_no-mans-land .rdecor {
+    width: 400px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#rr_no-mans-land .rdecor > img {
+    width: 400px;
+    height: auto;
+    opacity: .5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#rr_no-mans-land .rdecor > div {
+    width: 63%;
+    position: absolute;
+    top: -125px;
+    left: 120px;
+    text-align: justify;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font: 9px/140% 'Karla', sans-serif;
+}
+
+#rr_no-mans-land .rhl {
+    border-radius: 3px;
+    padding: 1px 4px;
+    font-weight: bold;
+    background: var(--text-accent-background-color);
+    color: var(--text-accent-text-color);
+}
+
+#rr_no-mans-land .rimg-container {
+    width: var(--img-size);
+    height: var(--img-size);
+    box-sizing: border-box;
+    border-radius: 100%;
+    margin: -10px 20px 0;
+    position: relative;
+    float: right;
+    padding: 20px;
+}
+
+#rr_no-mans-land .rimg-container * {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 100%;
+    position: relative;
+}
+
+#rr_no-mans-land .rimg-container > span {
+    display: block;
+    background: conic-gradient(transparent 30%, var(--lines) 60%, var(--lines) 60%, transparent 90%);
+    -webkit-mask-image: radial-gradient(circle at 50% 50%, transparent 69%, black 71%);
+    mask-image: radial-gradient(circle at 50% 50%, transparent 69%, black 71%);
+    position: absolute;
+    inset: 0;
+    animation: rconceived-in-the-sky-rotate 2s linear 0s infinite;
+}
+
+#rr_no-mans-land .rimg {
+    border: 1px solid var(--lines);
+    padding: 10px;
+}
+
+#rr_no-mans-land .rimg > div {
+    position: absolute;
+    inset: 0;
+    animation: rconceived-in-the-sky-rotate 10s linear 0s infinite;
+}
+
+#rr_no-mans-land .rimg > div::before, #rr_no-mans-land .rimg > div::after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 100%;
+    position: absolute;
+    left: calc(50% - 2px);
+}
+
+#rr_no-mans-land .rimg > div::before {
+    top: -2.5px;
+}
+
+#rr_no-mans-land .rimg > div::after {
+    bottom: -2.5px;
+}
+
+#rr_no-mans-land .rimg > img {
+    object-fit: cover;
+}
+
+#rr_no-mans-land a[href="https://is.gd/rossr"], #rr_no-mans-land a[href="https://is.gd/rossc"] {
+    height: 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#rr_no-mans-land:after {
+    display: block;
+    content: "「RR」";
+    font: bold 7px/12px 'Arial';
+    text-transform: uppercase;
+    opacity: .7;
+}
+
+#rr_no-mans-land:hover::after {
+    content: "「is.gd/rossr」";
+}
