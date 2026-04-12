@@ -32,6 +32,8 @@
   --main-font: 'Noto Sans Display', sans-serif;
   --font-size: 14px;
   --line-spacing: 160%;
+  /* EDIT IMAGES */
+  --header-img: url(https://i.imgur.com/mccW5aq.png);
   position: relative;
   margin: 30px;
 }
@@ -94,7 +96,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  background: url(https://i.imgur.com/mccW5aq.png) center/cover;
+  background: var(--header-img) center/cover;
 }
 
 #rr_red-strings-narr a[href="https://is.gd/rossr"] ~ .rcontainer .rtxt, #rr_red-strings-narr a[href="https://is.gd/rossc"] ~ .rcontainer .rtxt {

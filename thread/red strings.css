@@ -32,6 +32,9 @@
   --main-font: 'Noto Sans Display', sans-serif;
   --font-size: 14px;
   --line-spacing: 160%;
+  /* EDIT IMAGES */
+  --red-string-img: url(https://i.imgur.com/0OULFpR.png);
+  --footer-img: url(https://i.imgur.com/hFTTuHy.png);
   position: relative;
   margin: 30px;
 }
@@ -53,7 +56,7 @@
   height: 288px;
   margin-left: -20px;
   position: absolute;
-  background: url(https://i.imgur.com/0OULFpR.png) center/cover;
+  background: var(--red-string-img) center/cover;
   transform: rotate(6deg);
 }
 
@@ -112,7 +115,7 @@
   width: 100%;
   height: 100%;
   border-radius: 100%;
-  background: url(https://i.imgur.com/hFTTuHy.png) center/cover;
+  background: var(--footer-img) center/cover;
 }
 
 #rr_red-strings-post a[href="https://is.gd/rossr"] ~ .rcontainer .rtxt, #rr_red-strings-post a[href="https://is.gd/rossc"] ~ .rcontainer .rtxt {
