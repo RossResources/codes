@@ -1,0 +1,179 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&family=Raleway:wght@900&display=swap');
+
+#rr_red-strings-post {
+  /* EDIT SIZES */
+  --width: 700px;
+  --img-size: 110px;
+  /* EDIT COLORS */
+  --bg-color: #e7e6e5;
+  --border-color: #d1c9c2;
+  --accent: #dd7d8a;
+  --title-color: #bdb6b0;
+  --text-color: #000;
+  /* EDIT FONTS */
+  --main-font: 'Noto Sans Display', sans-serif;
+  --font-size: 14px;
+  --line-spacing: 160%;
+  position: relative;
+  margin: 30px;
+}
+
+#rr_red-strings-post a[href="https://is.gd/rossr"] ~ .rcontainer, #rr_red-strings-post a[href="https://is.gd/rossc"] ~ .rcontainer {
+  width: var(--width);
+  position: relative;
+  background: var(--bg-color);
+  background-clip: content-box;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  padding: 20px;
+}
+
+#rr_red-strings-post .rcontainer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 288px;
+  margin-left: -20px;
+  position: absolute;
+  background: url(https://i.imgur.com/0OULFpR.png) center/cover;
+  transform: rotate(6deg);
+}
+
+#rr_red-strings-post .rdivider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#rr_red-strings-post .rdivider.rheader {
+  margin-top: 80px;
+  margin-bottom: -20px;
+}
+
+#rr_red-strings-post .rdivider.rfooter {
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+#rr_red-strings-post .rdivider::before, #rr_red-strings-post .rdivider::after {
+  content: "";
+  height: 1px;
+  background: var(--border-color);
+}
+
+#rr_red-strings-post .rdivider.rheader::before, #rr_red-strings-post .rdivider.rheader::after {
+  width: calc(50% - var(--img-size) / 2 + 20px);
+  margin-top: 20px;
+}
+
+#rr_red-strings-post .rdivider.rfooter::before, #rr_red-strings-post .rdivider.rfooter::after {
+  width: calc(50% - var(--img-size) / 2 - 30px);
+  margin-top: -60px;
+}
+
+#rr_red-strings-post .rdivider::before {
+  margin-left: -30px;
+}
+
+#rr_red-strings-post .rdivider::after {
+  margin-right: -30px;
+}
+
+#rr_red-strings-post .rdivider .ricon {
+  width: var(--img-size);
+  height: var(--img-size);
+  padding: 10px;
+  border-radius: 100%;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+}
+
+#rr_red-strings-post .rdivider .ricon span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: url(https://i.imgur.com/hFTTuHy.png) center/cover;
+}
+
+#rr_red-strings-post a[href="https://is.gd/rossr"] ~ .rcontainer .rtxt, #rr_red-strings-post a[href="https://is.gd/rossc"] ~ .rcontainer .rtxt {
+  padding: 50px 70px;
+  text-align: justify;
+  font: var(--font-size)/var(--line-spacing) var(--main-font);
+  color: var(--text-color);
+}
+
+#rr_red-strings-post a[href="https://is.gd/rossr"] ~ .rcontainer .rtxt b, #rr_red-strings-post a[href="https://is.gd/rossc"] ~ .rcontainer .rtxt b {
+  font-weight: normal;
+  color: var(--accent);
+}
+
+#rr_red-strings-post .rdivider .rtitle img {
+  width: 300px;
+  margin-top: -50px;
+  margin-bottom: -80px;
+}
+
+#rr_red-strings-post .rdivider .rtitle span {
+  padding: 0 20px;
+  font: 900 80px/100% 'Raleway', sans-serif;
+  color: var(--title-color);
+  text-transform: uppercase;
+  letter-spacing: -3px;
+}
+
+#rr_red-strings-post .rdivider .rtitle div {
+  padding: 0 20px;
+  font: 900 12px/100% 'Raleway', sans-serif;
+  color: var(--title-color);
+  text-transform: uppercase;
+}
+
+#rr_red-strings-post .rdivider .rtitle b {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 3px 5px;
+  font-weight: 900;
+  background: var(--title-color);
+  color: #fff;
+}
+
+#rr_red-strings-post a[href="https://is.gd/rossr"], #rr_red-strings-post a[href="https://is.gd/rossc"] {
+  height: 12px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#rr_red-strings-post:after {
+  display: block;
+  content: "「RR」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+#rr_red-strings-post:hover::after {
+  content: "「is.gd/rossr」";
+}
