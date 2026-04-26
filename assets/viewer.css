@@ -1,0 +1,17 @@
+:root{--bg:#0f1113;--panel:#0b0d0f;--accent:#d96bc4;--fg:#e9e9ea}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--fg);height:100vh;display:flex;flex-direction:column}
+.topbar{padding:8px;background:linear-gradient(90deg,rgba(0,0,0,.2),transparent);}
+#openForm{display:flex;gap:8px;max-width:900px;margin:0 auto}
+#fileInput{flex:1;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,.06);background:#111;color:var(--fg)}
+#openForm button{padding:8px 10px;border-radius:6px;border:none;background:var(--accent);color:#fff}
+.container{flex:1;display:flex;min-height:0}
+.pane{padding:12px;overflow:auto}
+.pane.code{width:48%;border-right:1px solid rgba(255,255,255,.04);background:var(--panel)}
+.pane.preview{flex:1;background:#070708}
+.toolbar{display:flex;gap:8px;margin-bottom:8px}
+.toolbar button{padding:6px 8px;border-radius:6px;border:none;background:rgba(255,255,255,.06);color:var(--fg)}
+pre{background:transparent;color:var(--fg);white-space:pre-wrap;word-break:break-word;max-height:100%;margin:0}
+iframe{width:100%;height:100%;border:0;background:white}
+
+@media (max-width:800px){.container{flex-direction:column}.pane.code{width:100%;height:45vh;border-right:0;border-bottom:1px solid rgba(255,255,255,.04)}.pane.preview{height:55vh}}

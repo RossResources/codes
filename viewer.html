@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Codes Viewer</title>
+  <link rel="stylesheet" href="assets/viewer.css">
+</head>
+<body>
+  <header class="topbar">
+    <form id="openForm">
+      <input id="fileInput" aria-label="file path" placeholder="Enter path e.g. thread/starry night narração.html">
+      <button type="submit">Open</button>
+    </form>
+  </header>
+
+  <main class="container">
+    <section class="pane code">
+      <div class="toolbar">
+        <button id="copyBtn">Copy source</button>
+        <button id="openOrig">Open original</button>
+      </div>
+      <pre id="code"><code id="codeContent">Paste a file path and press Open</code></pre>
+    </section>
+
+    <section class="pane preview">
+      <iframe id="preview" title="Preview" sandbox="allow-scripts"></iframe>
+    </section>
+  </main>
+
+  <script src="assets/viewer.js"></script>
+</body>
+</html>
