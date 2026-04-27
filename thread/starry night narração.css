@@ -92,8 +92,7 @@
   transition: all .6s ease;
 }
 
-#rstarrynarracao .rheader span {
-  margin: 0;
+#rstarrynarracao .rtitulo > div {
   text-align: left;
   color: var(--lightcolor);
   text-transform: uppercase;
@@ -105,8 +104,7 @@
   color: var(--lightcolor);
 }
 
-#rstarrynarracao .rtitulo span::first-line {
-  display: block;
+#rstarrynarracao .rtitulo > div::first-line {
   font-family: 'Hikou Outline';
 }
 
