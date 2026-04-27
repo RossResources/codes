@@ -92,7 +92,7 @@
   transition: all .6s ease;
 }
 
-#rstarrynarracao .rheader h1 {
+#rstarrynarracao .rheader span {
   margin: 0;
   text-align: left;
   color: var(--lightcolor);
@@ -105,7 +105,7 @@
   color: var(--lightcolor);
 }
 
-#rstarrynarracao .rtitulo h1::first-line {
+#rstarrynarracao .rtitulo span::first-line {
   display: block;
   font-family: 'Hikou Outline';
 }
