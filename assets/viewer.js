@@ -269,19 +269,9 @@
 
   async function loadIndex() {
     try {
-      const cached = sessionStorage.getItem('templatesIndex');
-      if (cached) {
-        templatesIndex = JSON.parse(cached);
-        populateTypeSelect();
-        return;
-      }
-    } catch (e) {}
-
-    try {
       const res = await fetch(BASE_URL + 'assets/templates.json');
       if (!res.ok) throw new Error('HTTP ' + res.status);
       templatesIndex = await res.json();
-      try { sessionStorage.setItem('templatesIndex', JSON.stringify(templatesIndex)); } catch (e) {}
       populateTypeSelect();
     } catch (e) {
       console.error('Failed to load templates index:', e);
