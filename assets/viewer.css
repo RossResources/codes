@@ -1,17 +1,59 @@
 :root{--bg:#0f1113;--panel:#0b0d0f;--accent:#d96bc4;--fg:#e9e9ea}
 *{box-sizing:border-box}
+/* Ensure [hidden] always wins over any display rule set by ID/class selectors */
+[hidden]{display:none!important}
 body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--fg);height:100vh;display:flex;flex-direction:column}
-.topbar{padding:8px;background:linear-gradient(90deg,rgba(0,0,0,.2),transparent);}
-#openForm{display:flex;gap:8px;max-width:900px;margin:0 auto}
-#fileInput{flex:1;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,.06);background:#111;color:var(--fg)}
-#openForm button{padding:8px 10px;border-radius:6px;border:none;background:var(--accent);color:#fff}
-.container{flex:1;display:flex;min-height:0}
-.pane{padding:12px;overflow:auto}
-.pane.code{width:48%;border-right:1px solid rgba(255,255,255,.04);background:var(--panel)}
-.pane.preview{flex:1;background:#070708}
-.toolbar{display:flex;gap:8px;margin-bottom:8px}
-.toolbar button{padding:6px 8px;border-radius:6px;border:none;background:rgba(255,255,255,.06);color:var(--fg)}
-pre{background:transparent;color:var(--fg);white-space:pre-wrap;word-break:break-word;max-height:100%;margin:0}
-iframe{width:100%;height:100%;border:0;background:white}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+button {font-family: system-ui, Segoe UI, Roboto, Arial;}
 
-@media (max-width:800px){.container{flex-direction:column}.pane.code{width:100%;height:45vh;border-right:0;border-bottom:1px solid rgba(255,255,255,.04)}.pane.preview{height:55vh}}
+.topbar{padding:8px;background:linear-gradient(90deg,rgba(0,0,0,.2),transparent)}
+#openForm{display:flex;gap:8px;max-width:900px;margin:0 auto;align-items:center}
+#typeSelect{padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,.06);background:#111;color:var(--fg);font:inherit;cursor:pointer}
+
+/* Custom combobox */
+.file-combo{position:relative;flex:1}
+#fileInput{width:100%;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,.06);background:#111;color:var(--fg);font:inherit}
+#fileInput:focus{outline:none;border-color:rgba(255,255,255,.2)}
+#fileInput.error{border-color:#e05a5a}
+#fileDropdown{position:absolute;top:calc(100% + 4px);left:0;right:0;background:#1a1c20;border:1px solid rgba(255,255,255,.12);border-radius:6px;max-height:240px;overflow-y:auto;z-index:100;list-style:none;margin:0;padding:4px 0;box-shadow:0 4px 16px rgba(0,0,0,.5)}
+#fileDropdown li{padding:6px 10px;cursor:pointer;font-size:.875em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--fg)}
+#fileDropdown li:hover,#fileDropdown li[aria-selected=true]{background:rgba(255,255,255,.09);color:#fff}
+
+/* Layout */
+.container{flex:1;display:flex;min-height:0}
+.pane.code{flex:0 0 48%;background:var(--panel);display:flex;flex-direction:column;padding:12px;gap:8px}
+.resizer{width:5px;flex-shrink:0;cursor:col-resize;background:rgba(255,255,255,.05);transition:background .15s}
+.resizer:hover,.resizer.dragging{background:var(--accent)}
+.pane.preview{flex:1;background:#070708;overflow:hidden;display:flex;flex-direction:column}
+.preview-toolbar{display:flex;align-items:center;gap:8px;padding:5px 10px;flex-shrink:0;border-bottom:1px solid rgba(255,255,255,.06);background:#0c0e10;font-size:.78em;color:rgba(255,255,255,.4)}
+.preview-toolbar input[type=color]{width:26px;height:20px;padding:1px 2px;border:1px solid rgba(255,255,255,.15);border-radius:3px;background:none;cursor:pointer}
+#eyeDropperBtn{padding:2px 8px;border-radius:4px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:var(--fg);cursor:pointer;font:inherit}
+#eyeDropperBtn:hover{background:rgba(255,255,255,.1)}
+.toolbar{display:flex;gap:8px;flex-shrink:0}
+.toolbar button{padding:6px 8px;border-radius:6px;border:none;background:rgba(255,255,255,.06);color:var(--fg);cursor:pointer}
+.toolbar button:hover{background:rgba(255,255,255,.11)}
+
+/* Code editor: contenteditable <code> inside a scrollable <pre> */
+.code-editor{position:relative;flex:1;min-height:0;font-family:Consolas,'Courier New',monospace;font-size:12px;line-height:1.5}
+.code-editor pre{position:absolute;inset:0;margin:0;padding:8px;font:inherit;tab-size:2;white-space:pre-wrap;word-wrap:break-word;overflow-wrap:break-word;background:transparent;border:none;overflow:auto}
+/* Override Prism's white-space:pre, word-wrap:normal, word-break:normal on code[class*="language-"] */
+.code-editor pre code{display:block;background:transparent;font:inherit;white-space:pre-wrap;word-wrap:break-word;overflow-wrap:break-word;word-break:normal;outline:none;min-height:100%;caret-color:var(--fg)}
+
+/* Variable panel — lives inside .pane.code, below the code editor */
+#varPanel{border-top:1px solid rgba(255,255,255,.08);flex-shrink:0;margin:0 -12px -12px}
+.var-header{display:flex;align-items:center;justify-content:space-between;padding:5px 12px}
+.var-header>span{font-size:.7em;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.4)}
+#varToggle{background:none;border:none;color:rgba(255,255,255,.4);cursor:pointer;padding:0 2px;font-size:.8em;transition:transform .15s}
+#varToggle.collapsed{transform:rotate(-90deg)}
+#varBody{display:flex;flex-wrap:wrap;gap:16px 28px;padding:0 12px 10px;overflow-y:auto;max-height:160px}
+.var-group{display:flex;flex-direction:column;gap:5px}
+.var-group-title{font-size:.68em;text-transform:uppercase;letter-spacing:.05em;color:rgba(255,255,255,.3);padding-top:2px}
+.var-row{display:flex;align-items:center;gap:6px;font-size:.8em}
+.var-row label{color:rgba(255,255,255,.6);white-space:nowrap;cursor:default}
+input[type=color]{width:26px;height:20px;padding:1px 2px;border:1px solid rgba(255,255,255,.15);border-radius:3px;background:none;cursor:pointer;flex-shrink:0}
+.var-num{width:58px;padding:2px 5px;border-radius:4px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:var(--fg);font:inherit}
+.var-unit{color:rgba(255,255,255,.3);font-size:.85em}
+
+iframe{width:100%;flex:1;border:0;min-height:0}
+
+@media(max-width:800px){.container{flex-direction:column}.pane.code{width:100%;height:45vh;border-right:0;border-bottom:1px solid rgba(255,255,255,.04)}.pane.preview{height:55vh}}

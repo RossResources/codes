@@ -1,0 +1,12 @@
+{
+  "name": "codes-viewer-utils",
+  "version": "0.1.0",
+  "description": "Helper scripts for the Codes GitHub Pages viewer",
+  "main": "scripts/generate_templates.js",
+  "scripts": {
+    "build:templates": "node scripts/generate_templates.js"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

@@ -5,29 +5,60 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Codes Viewer</title>
   <link rel="stylesheet" href="assets/viewer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body>
   <header class="topbar">
     <form id="openForm">
-      <input id="fileInput" aria-label="file path" placeholder="Enter path e.g. thread/starry night narração.html">
-      <button type="submit">Open</button>
+      <label for="typeSelect" class="visually-hidden">Template type</label>
+      <select id="typeSelect"></select>
+
+      <div class="file-combo">
+        <label for="fileInput" class="visually-hidden">Template name</label>
+        <input id="fileInput" type="text" autocomplete="off" spellcheck="false"
+               placeholder="Template name…"
+               role="combobox" aria-autocomplete="list"
+               aria-expanded="false" aria-controls="fileDropdown">
+        <ul id="fileDropdown" role="listbox" hidden></ul>
+      </div>
+
     </form>
   </header>
 
   <main class="container">
     <section class="pane code">
       <div class="toolbar">
-        <button id="copyBtn">Copy source</button>
-        <button id="openOrig">Open original</button>
+        <button id="copyBtn" type="button">Copy source</button>
+        <button id="revertBtn" type="button">Revert changes</button>
       </div>
-      <pre id="code"><code id="codeContent">Paste a file path and press Open</code></pre>
+      <div class="code-editor">
+        <pre><code id="codeContent" class="language-markup"
+              contenteditable="true" spellcheck="false" autocomplete="off"></code></pre>
+      </div>
+      <div id="varPanel" hidden>
+        <div class="var-header">
+          <span>Variables</span>
+          <button id="varToggle" type="button" title="Toggle">▾</button>
+        </div>
+        <div id="varBody">
+          <div id="colorVars" class="var-group"></div>
+          <div id="sizeVars"  class="var-group"></div>
+        </div>
+      </div>
     </section>
 
+    <div class="resizer" id="resizer"></div>
     <section class="pane preview">
-      <iframe id="preview" title="Preview" sandbox="allow-scripts"></iframe>
+      <div class="preview-toolbar">
+        <span>Preview Background</span>
+        <input type="color" id="previewBgInput" title="Preview background color">
+        <button id="eyeDropperBtn" type="button" title="Pick any color from the screen (have the forum open on one side and the preview on the other)">Pick from screen</button>
+      </div>
+      <iframe id="preview" title="Preview" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
     </section>
   </main>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
   <script src="assets/viewer.js"></script>
 </body>
 </html>
