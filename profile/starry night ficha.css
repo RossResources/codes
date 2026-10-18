@@ -1,0 +1,652 @@
+/*
+
+            「 starry night 」
+     
+  TEMPLATE CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+          
+*/
+
+@font-face {
+  font-family: 'Hikou';
+  src: url(https://dl.dropbox.com/s/8sbzv5r5ma6bpef/Hikou%20Regular.otf) format('woff2');
+}
+
+@font-face {
+  font-family: 'Hikou Outline';
+  src: url(https://dl.dropbox.com/s/dg0q16ooq2vbies/Hikou%20Outline.otf) format('woff2');
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Sans'), local('NotoSans'), url(https://fonts.gstatic.com/s/notosans/v9/o-0IIpQlx3QUlC5A4PNr6zRAW_0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Sans'), local('NotoSans'), url(https://fonts.gstatic.com/s/notosans/v9/o-0IIpQlx3QUlC5A4PNr5TRA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v9/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v9/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+#rstarryficha {
+  width: 680px;
+  height: 680px;
+  position: relative;
+  font: 11px/180% 'Noto Sans';
+}
+
+#rstarryficha .rsurname, #rstarryficha .rname {
+  position: absolute;
+  z-index: 1;
+  filter: brightness(110%);
+  transition: all 1.5s ease;
+}
+
+#rstarryficha .rsurname h6, #rstarryficha .rname h6 {
+  display: inline-block;
+  color: var(--lightcolor);
+  text-transform: uppercase;
+  font: 75px/80px 'Hikou Outline';
+  text-shadow: 0 0 0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 2px;
+  margin: 0;
+}
+#rstarryficha .rsurname {
+  top: 33px;
+  left: 67px;
+}
+
+#rstarryficha .rname {
+  bottom: 33px;
+  right: 67px;
+}
+
+#rstarryficha .rfname, #rstarryficha .ridol {
+  width: 100%;
+  color: var(--darkercolor);
+  font: bold 8px/100% 'Poppins';
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: absolute;
+  opacity: 0;
+  transition: .4s ease;
+  transition-delay: 0;
+}
+
+#rstarryficha .rfname {
+  top: 30px;
+}
+
+#rstarryficha .ridol {
+  bottom: 30px;
+}
+
+#rstarryficha .rcover {
+  width: 540px;
+  height: 540px;
+  background-clip: content-box;
+  box-sizing: border-box;
+  border: solid transparent;
+  border-width: 50px 0;
+  overflow: hidden;
+  position: absolute;
+  top: calc(50% - 270px);
+  left: calc(50% - 270px);
+  transition: all .6s ease;
+}
+
+#rstarryficha .rcoverimg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: center/cover;
+  transition: all .6s ease;
+}
+
+#rstarryficha input[type="checkbox"] {
+  display: none;
+}
+
+#rstarryficha label[for="snbotao"] {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: var(--darkercolor) url(https://i.imgur.com/RglDFCs.png) bottom center/165%;
+  background-blend-mode: multiply;
+  position: relative;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+#rstarryficha label[for="snbotao"]::before {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, #2727278c);
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#rstarryficha:hover .rcoverimg {
+  transform: scale(1.1);
+}
+
+#rstarryficha .rcolor {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #d7d7d7;
+  mix-blend-mode: multiply;
+}
+
+#rstarryficha .rbuttoncontent {
+  width: 500px;
+  height: 500px;
+  background: #000000d9;
+  border: 1px solid var(--darkercolor);
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: left;
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(50% - 250px);
+  opacity: 0;
+  transition: all .6s ease;
+  transition-delay: 0;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label[for="snbotao"] .rcover {
+  border-width: 0px 0;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label[for="snbotao"] .rcoverimg {
+  transform: scale(1.1);
+  filter: brightness(.7);
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label[for="snbotao"] .rsurname {
+  left: -400px;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label[for="snbotao"] .rname {
+  right: -400px;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label[for="snbotao"] .rfname, #rstarryficha input[type="checkbox"]:checked ~ label[for="snbotao"] .ridol {
+  opacity: 1;
+  transition-delay: 1s;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label[for="snbotao"] .rbuttoncontent {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+#rstarryficha .rbuttoncontent input[type="radio"] {
+  display: none;
+}
+
+#rstarryficha .rtabs {
+  margin: 5px 13px;
+}
+
+#rstarryficha .rtab {
+  display: inline-block;
+  margin: 0 9px;
+}
+
+#rstarryficha .rtab label {
+  color: var(--lightcolor);
+  text-transform: uppercase;
+  font: 35px/45px 'Hikou Outline';
+  display: block;
+  cursor: crosshair;
+  position: relative;
+  z-index: 10;
+}
+
+#rstarryficha .rtab input[type="radio"]:checked ~ label {
+  font-family: 'Hikou';
+  color: var(--darkercolor);
+}
+
+#rstarryficha .rtabcontent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all .8s ease;
+}
+
+#rstarryficha .rtab input[type="radio"]:checked ~ label ~ .rtabcontent {
+  opacity: 1;
+  z-index: 2;
+}
+
+#rstarryficha .rnome {
+  margin: 60px 0 30px 100px;
+  font: 96px/100% 'Hikou Outline';
+  text-shadow: 0 0 2px;
+  color: var(--darkercolor);
+}
+
+#rstarryficha .rnome b {
+  display: block;
+  margin-top: -50px;
+  margin-left: 10px;
+  font-weight: normal;
+  font-family: 'Hikou';
+  text-shadow: 0 0 1px;
+  letter-spacing: -2px;
+}
+
+#rstarryficha .rtabcontent .rimg {
+  width: 200px;
+  height: 250px;
+  float: right;
+  margin-right: 20px;
+  background: #bdbdbd center/cover;
+  background-blend-mode: multiply;
+}
+
+#rstarryficha .rmove {
+  position: relative;
+  top: -50px;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label .rtab .rmove, #rstarryficha input[type="radio"]:checked ~ label ~ .rtabcontent .rmove {
+  opacity: 1;
+  top: 0;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label .rtab .rmove:nth-child(1), #rstarryficha input[type="radio"]:checked ~ label ~ .rtabcontent .rmove:nth-child(1) {
+  transition-delay: .5s;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label .rtab .rmove:nth-child(2), #rstarryficha input[type="radio"]:checked ~ label ~ .rtabcontent .rmove:nth-child(2) {
+  transition-delay: 1s;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label .rtab .rmove:nth-child(3), #rstarryficha input[type="radio"]:checked ~ label ~ .rtabcontent .rmove:nth-child(3) {
+  transition-delay: 1.5s;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label .rtab .rmove:nth-child(4), #rstarryficha input[type="radio"]:checked ~ label ~ .rtabcontent .rmove:nth-child(4) {
+  transition-delay: 2s;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label .rtab .rmove:nth-child(5), #rstarryficha input[type="radio"]:checked ~ label ~ .rtabcontent .rmove:nth-child(5) {
+  transition-delay: 2.5s;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label .rtab .rmove:nth-child(6), #rstarryficha input[type="radio"]:checked ~ label ~ .rtabcontent .rmove:nth-child(6) {
+  transition-delay: 3s;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label .rtab .rmove:nth-child(7), #rstarryficha input[type="radio"]:checked ~ label ~ .rtabcontent .rmove:nth-child(7) {
+  transition-delay: 3.5s;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label .rtab .rmove:nth-child(8), #rstarryficha input[type="radio"]:checked ~ label ~ .rtabcontent .rmove:nth-child(8) {
+  transition-delay: 4s;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label .rtab .rmove:nth-child(9), #rstarryficha input[type="radio"]:checked ~ label ~ .rtabcontent .rmove:nth-child(9) {
+  transition-delay: 4.5s;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label .rtab .rmove:nth-child(10), #rstarryficha input[type="radio"]:checked ~ label ~ .rtabcontent .rmove:nth-child(10) {
+  transition-delay: 5s;
+}
+
+#rstarryficha input[type="checkbox"]:checked ~ label .rtab .rmove:nth-child(11), #rstarryficha input[type="radio"]:checked ~ label ~ .rtabcontent .rmove:nth-child(11) {
+  transition-delay: 5.5s;
+}
+
+#rstarryficha .rcontentinfo {
+  margin-top: 12px;
+  margin-left: 60px;
+}
+
+#rstarryficha .rinfo {
+  color: #bdbdbd;
+  font: 10px/200% 'Poppins';
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#rstarryficha .rinfo b {
+  color: var(--darkercolor);
+}
+
+#rstarryficha .rvantagens, #rstarryficha .rdesvantagens {
+  width: 55%;
+  margin-top: 70px;
+  padding: 10px 40px;
+  color: #bdbdbd;
+  font: 10px/200% 'Poppins';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#rstarryficha .rdesvantagens {
+  float: right;
+  text-align: right;
+  margin-top: 0;
+}
+
+#rstarryficha .rvantagens b, #rstarryficha .rdesvantagens b {
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding: 0 0 10px;
+  font: 52px/100% 'Hikou Outline';
+  color: var(--darkercolor);
+  letter-spacing: -2px;
+}
+
+#rstarryficha .rvantagens > div, #rstarryficha .rdesvantagens > div {
+  height: 120px;
+  overflow: auto;
+}
+
+#rstarryficha .rvantagens b {
+  font-family: Hikou;
+}
+
+#rstarryficha .rhabs {
+  width: 100%;
+  text-align: center;
+  font: 80px/100% 'Hikou Outline';
+  color: var(--darkercolor);
+  margin-top: 70px;
+}
+
+#rstarryficha .rhabsprim, #rstarryficha .rhabssec {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 15px;
+  border-top: 50px solid transparent;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+#rstarryficha .rhabsprim i, #rstarryficha .rhabssec i {
+  display: block;
+  text-align: left;
+  font: 45px/100% 'Hikou';
+  color: var(--darkercolor);
+  letter-spacing: -2px;
+  margin: -90px 0 10px 0;
+}
+
+#rstarryficha .rhabsprim > div, #rstarryficha .rhabssec > div {
+  height: 300px;
+  overflow: auto;
+}
+
+#rstarryficha .rhab {
+  width: calc(100% - 55px);
+  margin: 5px 0 10px 20px;
+  text-align: left;
+  position: relative;
+}
+
+#rstarryficha .rhab p {
+  width: 100%;
+  height: 6px;
+  box-sizing: border-box;
+  line-height 3px;
+  margin: 0 0;
+  background: var(--darkercolor);
+}
+
+#rstarryficha .rhab p::after {
+  width: 164px;
+  height: 100%;
+  box-sizing: border-box;
+  display: block;
+  content: "";
+  border: 1px solid var(--darkercolor);
+}
+
+#rstarryficha .rhab b {
+  display: inline-block;
+  color: #bdbdbd;
+  font: 9px/15px 'Poppins';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#rstarryficha .rdesc {
+  margin: 10px 40px 15px 40px;
+  text-align: right;
+  font: 55px/100% 'Hikou Outline';
+  letter-spacing: -2px;
+  color: var(--darkercolor);
+}
+
+#rstarryficha .rdesc b {
+  display: block;
+  margin-top: -40px;
+  margin-left: 70px;
+  font-weight: normal;
+  font-family: 65px;
+  font-family: 'Hikou';
+  letter-spacing: -1px;
+}
+
+#rstarryficha .rdesc:first-child {
+  text-align: left;
+  margin-top: 70px;
+}
+
+#rstarryficha .rdesc:first-child b {
+  margin-left: 180px;
+}
+
+#rstarryficha .rdesctxt {
+  width: calc(100% - 60px);
+  height: 110px;
+  margin: 0 auto;
+  overflow: auto;
+  text-align: justify;
+  color: #bdbdbd;
+}
+
+#rstarryficha .rtabcontent h6 {
+  width: 100%;
+  margin: 70px 0 0 20px;
+  font: 56px/80% 'Hikou Outline';
+  letter-spacing: -1px;
+  color: var(--darkercolor);
+}
+
+#rstarryficha .rhisimg {
+  float: left;
+  width: 210px;
+  height: 280px;
+  margin: 30px 0 0 20px;
+  background: #bdbdbd center/cover;
+  background-blend-mode: multiply;
+}
+
+#rstarryficha .rhistorico {
+  width: 230px;
+  height: 305px;
+  overflow: auto;
+  float: right;
+  margin: -15px 30px 0 0;
+  box-sizing: border-box;
+  padding: 0 10px;
+  color: #bdbdbd;
+  text-align: justify;
+}
+
+#rstarryficha .rcuriosidades {
+  width: calc(100% - 280px);
+  height: 280px;
+  overflow: auto;
+  margin: 115px 0 0 30px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  color: #bdbdbd;
+  text-align: justify;
+}
+
+#rstarryficha .rcurimg {
+  width: 220px;
+  height: 290px;
+  background: #bdbdbd center/cover;
+  background-blend-mode: multiply;
+  float: right;
+  margin: 80px 25px 0 0;
+}
+
+#rstarryficha .rtabcontent h5, #rstarryficha .rtabcontent h4 {
+  float: right;
+  font: 52px/80% 'Hikou Outline';
+  letter-spacing: -3px;
+  color: var(--darkercolor);
+  margin: 10px 40px 0 0;
+}
+
+#rstarryficha .rtabcontent h5 {
+  margin-top: 30px;
+}
+
+#rstarryficha .rtabcontent h4 {
+  font-family: 'Hikou';
+}
+
+#rstarryficha .rtabcontent h5 b {
+  font-family: Hikou;
+  font-weight: normal;
+}
+
+#rstarryficha .rnpcs {
+  width: calc(100% - 40px);
+  height: calc(100% - 100px);
+  overflow: auto;
+  padding: 0 30px 0 10px;
+  box-sizing: border-box;
+  margin: 65px auto 0;
+}
+
+#rstarryficha .rnpc {
+  width: 100%;
+  height: 270px;
+  position: relative;
+}
+
+#rstarryficha .ricon {
+  width: 150px;
+  height: 160px;
+  background: #bdbdbd center/cover;
+  background-blend-mode: multiply;
+  position: absolute;
+  top: 75px;
+  right: 10px;
+}
+
+#rstarryficha .rnpcn {
+  font: 62px/80% 'Hikou Outline';
+  letter-spacing: -3px;
+  color: var(--darkercolor);
+  position: absolute;
+  right: 0;
+}
+
+#rstarryficha .rnpcn b {
+  font-family: 'Hikou';
+  font-weight: normal;
+  padding-left: 5px;
+}
+
+#rstarryficha .rnpcinfocont {
+  width: 220px;
+  position: absolute;
+  left: 30px;
+  top: 70px;
+}
+
+#rstarryficha .rnpcinfo {
+  color: #bdbdbd;
+  font: 10px/200% 'Poppins';
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#rstarryficha .rnpcinfo b {
+  color: var(--darkercolor);
+}
+
+#rstarryficha .rnpc:nth-child(even) .ricon {
+  left: 10px;
+  top: 90px;
+}
+
+#rstarryficha .rnpc:nth-child(even) .rnpcn {
+  left: 0;
+}
+
+#rstarryficha .rnpc:nth-child(even) .rnpcinfocont {
+  left: auto;
+  right: 0;
+  top: 70px;
+}
+
+#rstarryficha div::-webkit-scrollbar {
+  width: 4px;
+  border: 1px solid var(--darkercolor);
+}
+
+#rstarryficha div::-webkit-scrollbar-thumb {
+  background-color: var(--darkercolor)!important;
+}
+
+#rstarryficha:after {
+  display: block;
+  content: "「RR」";
+  font: bold 8px/12px Consolas;
+  color: #8e8e8e;
+  text-transform: uppercase;
+  opacity: .5;
+}
+
+#rstarryficha:hover::after {
+  content: "「ROSS RESOURCES」";
+}
