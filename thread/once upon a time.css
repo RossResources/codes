@@ -1,0 +1,209 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;800&display=swap');
+
+@font-face {
+    font-family: 'Cherolina';
+    src: url(https://dl.dropbox.com/s/nkvnl4t7ecmnoa2/Cherolina.ttf) format('woff2');
+}
+
+#ronceuponatimepost {
+  --background-color: #3a3636;
+  --border-color: #7da7a0;
+  --text-color: #dadada;
+  
+  --corner-position: -30px;
+  --corner-thickness: 6px;
+}
+
+#ronceuponatimepost .rcontainer {
+  width: 750px;
+  background: url(https://i.pinimg.com/564x/ac/34/54/ac3454ad82b49de2b92d1114e99b6b7b.jpg) fixed center/cover;
+  background-color: var(--background-color);
+  background-blend-mode: soft-light;
+  border: 1px transparent;
+  position: relative;
+  
+  font: 12px/200% 'Poppins', sans-serif;
+  color: var(--text-color);
+}
+
+#ronceuponatimepost .rborder {
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  border: var(--corner-thickness) solid var(--border-color);
+  outline: 1px solid var(--border-color);
+  outline-offset: 6px;
+}
+
+#ronceuponatimepost .rcorner {
+  width: 50px;
+  height: 50px;
+  border: solid var(--border-color);
+  position: absolute;
+}
+
+#ronceuponatimepost .rcorner.rtl {
+  border-width: 0 var(--corner-thickness) var(--corner-thickness) 0;
+  top: 0;
+  left: 0;
+}
+
+#ronceuponatimepost .rcorner.rtr {
+  border-width: 0 0 var(--corner-thickness) var(--corner-thickness);
+  top: 0;
+  right: 0;
+}
+
+#ronceuponatimepost .rcorner.rbl {
+  border-width: var(--corner-thickness) var(--corner-thickness) 0 0;
+  bottom: 0;
+  left: 0;
+}
+
+#ronceuponatimepost .rcorner.rbr {
+  border-width: var(--corner-thickness) 0 0 var(--corner-thickness);
+  bottom: 0;
+  right: 0;
+}
+
+#ronceuponatimepost .rlinetp {
+  width: 1px;
+  height: 95px;
+  background: var(--border-color);
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 0;
+}
+
+#ronceuponatimepost .rlinemd {
+  width: 1px;
+  height: 7%;
+  background: var(--border-color);
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 220px;
+}
+
+#ronceuponatimepost .rlinebt {
+  width: 1px;
+  height: 95px;
+  background: var(--border-color);
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+}
+
+#ronceuponatimepost .rwrap {
+  border: 1px solid transparent;
+  position: relative;
+}
+
+#ronceuponatimepost .rheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 95px 0 20px;
+}
+
+#ronceuponatimepost .rheader > div {
+  margin: 0 20px;
+}
+
+#ronceuponatimepost .rtitle {
+  color: var(--border-color);
+  font: 50px/100% 'Cherolina', cursive;
+  text-transform: lowercase;
+  padding-bottom: 15px;
+}
+
+#ronceuponatimepost .rtitle b {
+  width: 100%;
+  display: block;
+  font: 70px/150% 'Abril Fatface', cursive;
+  letter-spacing: -1px;
+  margin-bottom: -5px;
+}
+
+#ronceuponatimepost .rtitle i {
+  display: block;
+  font-style: normal;
+  position: relative;
+  top: 0;
+}
+
+#ronceuponatimepost .rimg {
+  width: 100px;
+  height: 100px;
+}
+
+#ronceuponatimepost .rimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+  padding: 7px;
+  border: 1px solid var(--border-color);
+}
+
+#ronceuponatimepost .rtxt {
+  padding: 0 100px 160px;
+  text-align: justify;
+  letter-spacing: .5px;
+}
+
+#ronceuponatimepost .rtxt img {
+  display: block;
+  max-width: 430px;
+  margin: 15px auto;
+  padding: 7px;
+  border: 1px solid var(--border-color);
+}
+
+#ronceuponatimepost .rsub {
+  width: 440px;
+  padding: 3px 30px;
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--border-color);
+}
+
+#ronceuponatimepost:after {
+  display: block;
+  content: "「R」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .3;
+}
+
+#ronceuponatimepost:hover::after {
+  content: "「ROSS RESOURCES」";
+}
