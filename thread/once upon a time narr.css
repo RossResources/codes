@@ -1,0 +1,186 @@
+/*
+
+       _ __ ___  ___ ___   _ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+      | '__/ _ \/ __/ __| | '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+      | | | (_) \__ \__ \ | | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+      |_|  \___/|___/___/ |_|  \___||___/\___/ \__,_|_|  \___\___||___/
+
+
+                      https://rossresources.tumblr.com/
+   
+                    CRIADO POR ROSS, NÃO TIRE OS CRÉDITOS
+
+                                *:･ﾟ✧*:･ﾟ✧
+
+                   CREATED BY ROSS DON'T REMOVE MY CREDITS
+          
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;800&display=swap');
+
+@font-face {
+    font-family: 'Cherolina';
+    src: url(https://dl.dropbox.com/s/nkvnl4t7ecmnoa2/Cherolina.ttf) format('woff2');
+}
+
+#ronceuponatimenarr {
+  --background-color: #3a3636;
+  --border-color: #7da7a0;
+  --text-color: #dadada;
+  
+  --corner-position: -30px;
+  --corner-thickness: 6px;
+}
+
+#ronceuponatimenarr .rcontainer {
+  width: 750px;
+  background: url(https://i.pinimg.com/564x/ac/34/54/ac3454ad82b49de2b92d1114e99b6b7b.jpg) fixed center/cover;
+  background-color: var(--background-color);
+  background-blend-mode: soft-light;
+  border: 1px transparent;
+  position: relative;
+  
+  font: 12px/200% 'Poppins', sans-serif;
+  color: var(--text-color);
+}
+
+#ronceuponatimenarr .rborder {
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  border: var(--corner-thickness) solid var(--border-color);
+  outline: 1px solid var(--border-color);
+  outline-offset: 6px;
+}
+
+#ronceuponatimenarr .rcorner {
+  width: 50px;
+  height: 50px;
+  border: solid var(--border-color);
+  position: absolute;
+}
+
+#ronceuponatimenarr .rcorner.rtl {
+  border-width: 0 var(--corner-thickness) var(--corner-thickness) 0;
+  top: 0;
+  left: 0;
+}
+
+#ronceuponatimenarr .rcorner.rtr {
+  border-width: 0 0 var(--corner-thickness) var(--corner-thickness);
+  top: 0;
+  right: 0;
+}
+
+#ronceuponatimenarr .rcorner.rbl {
+  border-width: var(--corner-thickness) var(--corner-thickness) 0 0;
+  bottom: 0;
+  left: 0;
+}
+
+#ronceuponatimenarr .rcorner.rbr {
+  border-width: var(--corner-thickness) 0 0 var(--corner-thickness);
+  bottom: 0;
+  right: 0;
+}
+
+#ronceuponatimenarr .rlinetp {
+  width: 1px;
+  height: 95px;
+  background: var(--border-color);
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 0;
+}
+
+#ronceuponatimenarr .rlinemd {
+  width: 1px;
+  height: 7%;
+  background: var(--border-color);
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 220px;
+}
+
+#ronceuponatimenarr .rlinebt {
+  width: 1px;
+  height: 95px;
+  background: var(--border-color);
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+}
+
+#ronceuponatimenarr .rwrap {
+  border: 1px solid transparent;
+  position: relative;
+}
+
+#ronceuponatimenarr .rtitle {
+  margin: 95px 0 20px;
+  position: relative;
+  color: var(--border-color);
+  font: 50px/100% 'Cherolina', cursive;
+  text-transform: lowercase;
+  padding-bottom: 15px;
+}
+
+#ronceuponatimenarr .rtitle b {
+  width: 100%;
+  display: block;
+  font: 70px/150% 'Abril Fatface', cursive;
+  letter-spacing: -1px;
+  margin-bottom: -5px;
+}
+
+#ronceuponatimenarr .rtitle i {
+  display: block;
+  font-style: normal;
+  position: relative;
+  top: 0;
+}
+
+#ronceuponatimenarr .rtxt {
+  padding: 0 100px 160px;
+  text-align: justify;
+  letter-spacing: .5px;
+}
+
+#ronceuponatimenarr .rtxt img {
+  display: block;
+  max-width: 430px;
+  margin: 15px auto;
+  padding: 7px;
+  border: 1px solid var(--border-color);
+}
+
+#ronceuponatimenarr .rsub {
+  width: 440px;
+  padding: 3px 30px;
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--border-color);
+}
+
+#ronceuponatimenarr:after {
+  display: block;
+  content: "「R」";
+  font: bold 7px/12px 'Arial';
+  text-transform: uppercase;
+  opacity: .3;
+}
+
+#ronceuponatimenarr:hover::after {
+  content: "「ROSS RESOURCES」";
+}
